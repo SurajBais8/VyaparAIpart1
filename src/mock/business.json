@@ -1,0 +1,14 @@
+[
+  {
+    "id": "biz_1",
+    "businessName": "Acme Global Solutions",
+    "gstNumber": "22AAAAA0000A1Z5",
+    "panNumber": "ABCDE1234F",
+    "businessType": "SaaS",
+    "industry": "tech",
+    "currency": "INR",
+    "timezone": "Asia/Kolkata",
+    "country": "India",
+    "employees": "10-50"
+  }
+]

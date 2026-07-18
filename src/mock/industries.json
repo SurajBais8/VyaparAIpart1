@@ -1,0 +1,9 @@
+[
+  {"id": "tech", "name": "Technology & Software (SaaS)"},
+  {"id": "fintech", "name": "Financial Services (Fintech)"},
+  {"id": "ecommerce", "name": "E-Commerce & Retail"},
+  {"id": "healthcare", "name": "Healthcare & Biotech"},
+  {"id": "education", "name": "Education & EdTech"},
+  {"id": "manufacturing", "name": "Manufacturing & Logistics"},
+  {"id": "other", "name": "Other Services"}
+]

@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button, Input, Card, ProgressBar, Spinner } from '../components/ui';
 import {
   Building2,
@@ -29,6 +29,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 export const OnboardingScreen: React.FC = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { user, completeOnboarding } = useAuthStore();
   const {
     businessInfo, setBusinessInfo,
@@ -72,6 +73,26 @@ export const OnboardingScreen: React.FC = () => {
       navigate('/login');
     }
   }, [user, navigate]);
+
+  // Load registration params
+  useEffect(() => {
+    const biz = searchParams.get('biz');
+    const bizType = searchParams.get('bizType');
+    const gst = searchParams.get('gst');
+    const pan = searchParams.get('pan');
+
+    if (biz || bizType || gst || pan) {
+      setBusinessInfo({
+        businessName: biz || businessInfo.businessName,
+        businessType: bizType || 'SaaS',
+        gstNumber: gst || businessInfo.gstNumber,
+        panNumber: pan || businessInfo.panNumber,
+      });
+      toast.success('Registration parameters loaded into profile!', {
+        id: 'register-params-toast',
+      });
+    }
+  }, [searchParams]);
 
   const validateStep = (step: number) => {
     const errors: Record<string, string> = {};

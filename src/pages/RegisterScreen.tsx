@@ -33,6 +33,13 @@ export const RegisterScreen: React.FC = () => {
   // Business Fields
   const [businessName, setBusinessNameText] = useState('');
   const [businessType, setBusinessType] = useState('SaaS');
+  const [industry, setIndustry] = useState('tech');
+  const [gstNumber, setGstNumber] = useState('');
+  const [panNumber, setPanNumber] = useState('');
+  const [currency, setCurrency] = useState('INR');
+  const [timezone, setTimezone] = useState('Asia/Kolkata');
+  const [country, setCountry] = useState('India');
+  const [employees, setEmployees] = useState('11-50');
   const [acceptTerms, setAcceptTerms] = useState(false);
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -88,6 +95,14 @@ export const RegisterScreen: React.FC = () => {
       }
     } else {
       if (!businessName) newErrors.businessName = 'Business name is required';
+      if (country === 'India' && !gstNumber) {
+        newErrors.gstNumber = 'GST Number is required for Indian organizations';
+      } else if (gstNumber && !/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(gstNumber.toUpperCase())) {
+        newErrors.gstNumber = 'Invalid GST format (Example: 22AAAAA0000A1Z5)';
+      }
+      if (panNumber && !/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(panNumber.toUpperCase())) {
+        newErrors.panNumber = 'Invalid PAN format (Example: ABCDE1234F)';
+      }
       if (!acceptTerms) newErrors.acceptTerms = 'You must accept the terms & conditions';
     }
 
@@ -119,14 +134,19 @@ export const RegisterScreen: React.FC = () => {
       setIsLoading(false);
       // Store temporary email & business info in stores
       setTempEmail(email);
-      setBusinessInfo({ businessName, businessType });
+      setBusinessInfo({
+        businessName,
+        businessType,
+        gstNumber,
+        panNumber
+      });
 
       // Trigger simulated registration OTP delivery
       toast.success('Registration code transmitted!', {
         description: `A 6-digit verification pin has been broadcasted to ${email}`,
       });
       // Redirect to OTP flow with metadata
-      navigate(`/otp?type=register&email=${encodeURIComponent(email)}&first=${encodeURIComponent(firstName)}&last=${encodeURIComponent(lastName)}`);
+      navigate(`/otp?type=register&email=${encodeURIComponent(email)}&first=${encodeURIComponent(firstName)}&last=${encodeURIComponent(lastName)}&biz=${encodeURIComponent(businessName)}&bizType=${encodeURIComponent(businessType)}&industry=${encodeURIComponent(industry)}&gst=${encodeURIComponent(gstNumber)}&pan=${encodeURIComponent(panNumber)}&cur=${encodeURIComponent(currency)}&tz=${encodeURIComponent(timezone)}&country=${encodeURIComponent(country)}&employees=${encodeURIComponent(employees)}`);
     }, 1300);
   };
 
@@ -313,7 +333,7 @@ export const RegisterScreen: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
-          className="space-y-5"
+          className="space-y-4"
         >
           <Input
             label={t.businessName}
@@ -323,21 +343,139 @@ export const RegisterScreen: React.FC = () => {
             icon={<Building className="w-4 h-4" />}
           />
 
-          <div className="relative mb-5 text-left">
-            <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
-              {t.businessType}
-            </label>
-            <select
-              value={businessType}
-              onChange={(e) => setBusinessType(e.target.value)}
-              className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xs text-sm outline-none text-slate-800 dark:text-slate-100"
-            >
-              <option value="SaaS">SaaS Platform</option>
-              <option value="E-commerce">E-commerce Enterprise</option>
-              <option value="Healthcare">Healthcare Operations</option>
-              <option value="Fintech">Fintech Organization</option>
-              <option value="Consulting">Consultancy Agency</option>
-            </select>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative text-left">
+              <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
+                {t.businessType}
+              </label>
+              <select
+                value={businessType}
+                onChange={(e) => setBusinessType(e.target.value)}
+                className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs outline-none text-slate-800 dark:text-slate-100"
+              >
+                <option value="SaaS">SaaS Platform</option>
+                <option value="E-commerce">E-commerce Enterprise</option>
+                <option value="Healthcare">Healthcare Operations</option>
+                <option value="Fintech">Fintech Organization</option>
+                <option value="Consulting">Consultancy Agency</option>
+              </select>
+            </div>
+
+            <div className="relative text-left">
+              <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
+                Industry
+              </label>
+              <select
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+                className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs outline-none text-slate-800 dark:text-slate-100"
+              >
+                <option value="tech">Technology & Software</option>
+                <option value="fintech">Financial Services</option>
+                <option value="retail">E-Commerce & Retail</option>
+                <option value="health">Healthcare & Biotech</option>
+                <option value="edu">Education & EdTech</option>
+                <option value="mfg">Manufacturing & Logistics</option>
+                <option value="other">Other Professional Services</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <Input
+              label="GSTIN (Tax ID)"
+              placeholder="e.g., 22AAAAA0000A1Z5"
+              value={gstNumber}
+              onChange={(e) => setGstNumber(e.target.value.toUpperCase())}
+              error={errors.gstNumber}
+              icon={<Building className="w-4 h-4" />}
+            />
+
+            <Input
+              label="PAN (Optional)"
+              placeholder="e.g., ABCDE1234F"
+              value={panNumber}
+              onChange={(e) => setPanNumber(e.target.value.toUpperCase())}
+              error={errors.panNumber}
+              icon={<Building className="w-4 h-4" />}
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative text-left">
+              <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
+                Country
+              </label>
+              <select
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+                className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs outline-none text-slate-800 dark:text-slate-100"
+              >
+                <option value="India">India (INR)</option>
+                <option value="United States">United States (USD)</option>
+                <option value="United Kingdom">United Kingdom (GBP)</option>
+                <option value="Canada">Canada (CAD)</option>
+                <option value="Australia">Australia (AUD)</option>
+                <option value="Singapore">Singapore (SGD)</option>
+                <option value="Germany">Germany (EUR)</option>
+              </select>
+            </div>
+
+            <div className="relative text-left">
+              <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
+                Staff Volume (Employees)
+              </label>
+              <select
+                value={employees}
+                onChange={(e) => setEmployees(e.target.value)}
+                className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs outline-none text-slate-800 dark:text-slate-100"
+              >
+                <option value="1-10">1 - 10 employees</option>
+                <option value="11-50">11 - 50 employees</option>
+                <option value="51-250">51 - 250 employees</option>
+                <option value="251-1000">251 - 1000 employees</option>
+                <option value="1000+">1000+ corporate employees</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative text-left">
+              <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
+                Base Currency
+              </label>
+              <select
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value)}
+                className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs outline-none text-slate-800 dark:text-slate-100"
+              >
+                <option value="INR">INR (₹)</option>
+                <option value="USD">USD ($)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="AUD">AUD ($)</option>
+                <option value="CAD">CAD ($)</option>
+                <option value="SGD">SGD ($)</option>
+              </select>
+            </div>
+
+            <div className="relative text-left">
+              <label className="text-xs font-semibold text-slate-400 dark:text-slate-500 select-none ml-1">
+                Preferred Timezone
+              </label>
+              <select
+                value={timezone}
+                onChange={(e) => setTimezone(e.target.value)}
+                className="w-full mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs outline-none text-slate-800 dark:text-slate-100"
+              >
+                <option value="Asia/Kolkata">Asia/Kolkata (UTC+5:30)</option>
+                <option value="America/New_York">America/New_York (EST)</option>
+                <option value="Europe/London">Europe/London (GMT)</option>
+                <option value="America/Los_Angeles">America/Los_Angeles (PST)</option>
+                <option value="Asia/Singapore">Asia/Singapore (SGT)</option>
+                <option value="Australia/Sydney">Australia/Sydney (AEST)</option>
+              </select>
+            </div>
           </div>
 
           <label className="flex items-start gap-2.5 cursor-pointer select-none text-xs leading-relaxed text-slate-500 dark:text-slate-400">

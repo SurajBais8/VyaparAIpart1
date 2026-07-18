@@ -6,11 +6,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { Button, Input, Card } from '../components/ui';
-import { Mail, Lock, Phone, ArrowLeft, ShieldAlert } from 'lucide-react';
+import { Mail, Lock, Phone, ArrowLeft, ShieldAlert, ShieldCheck, Cpu, History, AlertTriangle, Eye, EyeOff } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 import { TRANSLATIONS } from '../constants/languages';
 import { toast } from 'sonner';
-import { motion, useAnimation } from 'motion/react';
+import { motion, useAnimation, AnimatePresence } from 'motion/react';
+import { authService } from '../services/auth.service';
+import { helpers } from '../utils/helpers';
+import { dateUtils } from '../utils/date';
 
 export const LoginScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -26,6 +29,16 @@ export const LoginScreen: React.FC = () => {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   
+  // Advanced features states
+  const [isCapsLockActive, setIsCapsLockActive] = useState(false);
+  const [passwordStrength, setPasswordStrength] = useState({ score: 0, feedback: 'Enter a password' });
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+  const [rememberDevice, setRememberDevice] = useState(true);
+  const [trustedBrowser, setTrustedBrowser] = useState(true);
+  const [showHistory, setShowHistory] = useState(false);
+  const [loginHistory, setLoginHistory] = useState<any[]>([]);
+  const [deviceInfo, setDeviceInfo] = useState({ os: 'Detecting...', browser: 'Detecting...' });
+
   const [errors, setErrors] = useState<{ email?: string; password?: string; phone?: string }>({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -33,6 +46,9 @@ export const LoginScreen: React.FC = () => {
   const controls = useAnimation();
 
   useEffect(() => {
+    setDeviceInfo(helpers.getDeviceDetails());
+    authService.getLoginHistory().then((data) => setLoginHistory(data));
+    
     const modeParam = searchParams.get('mode');
     if (modeParam === 'phone') {
       setLoginMode('phone');
@@ -40,6 +56,15 @@ export const LoginScreen: React.FC = () => {
       setLoginMode('email');
     }
   }, [searchParams]);
+
+  const handlePasswordChange = (val: string) => {
+    setPassword(val);
+    setPasswordStrength(authService.calculatePasswordStrength(val));
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    setIsCapsLockActive(authService.checkCapsLock(e));
+  };
 
   const validateForm = () => {
     const newErrors: typeof errors = {};
@@ -93,8 +118,7 @@ export const LoginScreen: React.FC = () => {
           });
           navigate('/onboarding');
         } else {
-          // Allow any login for demo but warn user if they typed something else, or let any login pass to make exploration super smooth!
-          // Let's allow any email/password to log in for smooth previewing, but notify them of default credentials just in case.
+          // Allow any login for demo
           login(email, 'John', 'Doe');
           toast.success('Demo login authorized successfully!', {
             description: `Session initiated for ${email}`,
@@ -140,6 +164,12 @@ export const LoginScreen: React.FC = () => {
         </p>
       </div>
 
+      {/* Last Login Info Badge */}
+      <div className="flex items-center gap-2 p-2 px-3 bg-slate-100 dark:bg-slate-900 rounded-lg text-[11px] text-slate-500 dark:text-slate-400 border border-slate-200/40 dark:border-slate-800/40">
+        <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
+        <span>Last Login: <b>Today, 10:00 AM</b> from Chrome (macOS)</span>
+      </div>
+
       {/* Demo Credentials Alert Card */}
       {loginMode === 'email' && (
         <Card variant="info" className="text-xs flex gap-2.5 p-3.5 border-blue-100 dark:border-blue-950/40">
@@ -166,14 +196,64 @@ export const LoginScreen: React.FC = () => {
               error={errors.email}
               icon={<Mail className="w-4 h-4" />}
             />
-            <Input
-              label={t.password}
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              error={errors.password}
-              icon={<Lock className="w-4 h-4" />}
-            />
+            
+            <div className="relative">
+              <Input
+                label={t.password}
+                type="password"
+                value={password}
+                onChange={(e) => handlePasswordChange(e.target.value)}
+                onKeyDown={handleKeyDown}
+                onFocus={() => setIsPasswordFocused(true)}
+                onBlur={() => setIsPasswordFocused(false)}
+                error={errors.password}
+                icon={<Lock className="w-4 h-4" />}
+              />
+              
+              {/* Caps Lock Alert */}
+              <AnimatePresence>
+                {isCapsLockActive && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    className="absolute right-3 top-1 flex items-center gap-1 text-[10px] font-bold text-amber-600 bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded border border-amber-100 dark:border-amber-900/30"
+                  >
+                    <AlertTriangle className="w-3 h-3 animate-pulse" /> Caps Lock On
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Password Strength and Policy tooltip */}
+              {isPasswordFocused && (
+                <div className="mt-1.5 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 space-y-2">
+                  <div className="flex justify-between items-center text-[10px] font-bold">
+                    <span className="text-slate-400 uppercase tracking-wider">Strength Indicator:</span>
+                    <span className={
+                      passwordStrength.score <= 1 ? 'text-red-500' :
+                      passwordStrength.score <= 3 ? 'text-amber-500' : 'text-emerald-500'
+                    }>
+                      {passwordStrength.feedback}
+                    </span>
+                  </div>
+                  
+                  {/* Strength Bar */}
+                  <div className="h-1 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                    <div 
+                      className={`h-full transition-all duration-300 ${
+                        passwordStrength.score <= 1 ? 'bg-red-500' :
+                        passwordStrength.score <= 3 ? 'bg-amber-500' : 'bg-emerald-500'
+                      }`}
+                      style={{ width: `${(passwordStrength.score / 4) * 100}%` }}
+                    />
+                  </div>
+
+                  <p className="text-[10px] text-slate-400 leading-relaxed text-left font-light">
+                    <b>Policy rules:</b> Minimum 8 characters, containing uppercase, numbers, and special symbols.
+                  </p>
+                </div>
+              )}
+            </div>
           </>
         ) : (
           <Input
@@ -189,23 +269,48 @@ export const LoginScreen: React.FC = () => {
 
         {/* Options Row */}
         {loginMode === 'email' && (
-          <div className="flex justify-between items-center text-xs">
-            <label className="flex items-center gap-2 cursor-pointer select-none text-slate-600 dark:text-slate-400">
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-                className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 accent-indigo-600 focus:ring-indigo-500/20"
-              />
-              <span>{t.rememberMe}</span>
-            </label>
+          <div className="space-y-2.5">
+            <div className="flex justify-between items-center text-xs">
+              <label className="flex items-center gap-2 cursor-pointer select-none text-slate-600 dark:text-slate-400">
+                <input
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 accent-indigo-600 focus:ring-indigo-500/20"
+                />
+                <span>{t.rememberMe}</span>
+              </label>
 
-            <Link
-              to="/forgot-password"
-              className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
-            >
-              {t.forgotPassword}
-            </Link>
+              <Link
+                to="/forgot-password"
+                className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+              >
+                {t.forgotPassword}
+              </Link>
+            </div>
+
+            {/* Remember Device and Trusted Browser */}
+            <div className="flex flex-col gap-2 p-3 bg-slate-100/30 dark:bg-slate-900/40 rounded-xl border border-slate-200/40 dark:border-slate-800/40 text-xs">
+              <label className="flex items-center gap-2.5 cursor-pointer select-none text-slate-600 dark:text-slate-400">
+                <input
+                  type="checkbox"
+                  checked={rememberDevice}
+                  onChange={(e) => setRememberDevice(e.target.checked)}
+                  className="w-3.5 h-3.5 rounded border-slate-300 dark:border-slate-700 accent-indigo-600 focus:ring-indigo-500/10"
+                />
+                <span>Remember Device (Bypass future 2FA validations)</span>
+              </label>
+
+              <label className="flex items-center gap-2.5 cursor-pointer select-none text-slate-600 dark:text-slate-400">
+                <input
+                  type="checkbox"
+                  checked={trustedBrowser}
+                  onChange={(e) => setTrustedBrowser(e.target.checked)}
+                  className="w-3.5 h-3.5 rounded border-slate-300 dark:border-slate-700 accent-indigo-600 focus:ring-indigo-500/10"
+                />
+                <span>Mark as Trusted Browser (Keep me logged in for 30 days)</span>
+              </label>
+            </div>
           </div>
         )}
 
@@ -219,6 +324,51 @@ export const LoginScreen: React.FC = () => {
           {loginMode === 'email' ? t.login : t.getOtp}
         </Button>
       </form>
+
+      {/* Device Information Card */}
+      <div className="flex items-center gap-3 p-3 bg-indigo-50/20 dark:bg-indigo-950/10 border border-indigo-100/30 dark:border-indigo-900/30 rounded-xl text-xs text-slate-500 dark:text-slate-400">
+        <Cpu className="w-4 h-4 text-indigo-500 flex-shrink-0" />
+        <p className="text-[11px] leading-relaxed">
+          Detected: <b>{deviceInfo.os}</b> using <b>{deviceInfo.browser}</b>. Secure session keys will bind to this physical client signature.
+        </p>
+      </div>
+
+      {/* View Login Activity Logs */}
+      <div className="border-t border-slate-100 dark:border-slate-900 pt-3">
+        <button
+          onClick={() => setShowHistory(!showHistory)}
+          className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-pointer"
+        >
+          <History className="w-3.5 h-3.5" />
+          <span>{showHistory ? 'Hide Access Logs' : 'View Access Logs'}</span>
+        </button>
+
+        <AnimatePresence>
+          {showHistory && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden mt-2 space-y-2 max-h-40 overflow-y-auto pr-1"
+            >
+              {loginHistory.map((item, idx) => (
+                <div key={idx} className="flex justify-between items-center p-2 bg-slate-50 dark:bg-slate-900 rounded-lg text-[10px] border border-slate-200/20 dark:border-slate-800/20">
+                  <div className="space-y-0.5 text-left">
+                    <p className="font-bold text-slate-700 dark:text-slate-300">{item.device}</p>
+                    <p className="text-slate-400 font-mono">{item.ip} • {item.location}</p>
+                  </div>
+                  <div className="text-right space-y-0.5">
+                    <span className={`px-1.5 py-0.5 font-bold rounded ${item.status === 'success' ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-450' : 'bg-red-50 text-red-600 dark:bg-red-950/40 dark:text-red-450'}`}>
+                      {item.status.toUpperCase()}
+                    </span>
+                    <p className="text-slate-400 font-light mt-0.5">{dateUtils.formatRelative(item.timestamp)}</p>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       {/* Mode Switcher Divider */}
       <div className="relative flex items-center justify-center my-4">

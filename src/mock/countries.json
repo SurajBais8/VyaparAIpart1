@@ -1,0 +1,9 @@
+[
+  {"code": "US", "name": "United States", "currency": "USD", "timezone": "America/New_York"},
+  {"code": "IN", "name": "India", "currency": "INR", "timezone": "Asia/Kolkata"},
+  {"code": "GB", "name": "United Kingdom", "currency": "GBP", "timezone": "Europe/London"},
+  {"code": "CA", "name": "Canada", "currency": "CAD", "timezone": "America/Toronto"},
+  {"code": "AU", "name": "Australia", "currency": "AUD", "timezone": "Australia/Sydney"},
+  {"code": "SG", "name": "Singapore", "currency": "SGD", "timezone": "Asia/Singapore"},
+  {"code": "DE", "name": "Germany", "currency": "EUR", "timezone": "Europe/Berlin"}
+]
