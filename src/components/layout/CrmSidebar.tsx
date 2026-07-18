@@ -51,6 +51,15 @@ export const CrmSidebar: React.FC = () => {
     { title: 'Export Reports', path: '/crm/reports', icon: <Files className="w-4 h-4" /> },
   ];
 
+  const inventoryMenu = [
+    { title: 'Material Inventory', path: '/inventory/items', icon: <Layers className="w-4 h-4" /> },
+    { title: 'Storage Warehouses', path: '/inventory/warehouses', icon: <Building2 className="w-4 h-4" /> },
+    { title: 'Stock Movements', path: '/inventory/transfers', icon: <Activity className="w-4 h-4" /> },
+    { title: 'Purchase Orders', path: '/inventory/purchase', icon: <Files className="w-4 h-4" /> },
+    { title: 'Supplier Directory', path: '/inventory/suppliers', icon: <Users2 className="w-4 h-4" /> },
+    { title: 'Inventory Analytics', path: '/inventory/analytics', icon: <LineChart className="w-4 h-4" /> },
+  ];
+
   const renderNavGroup = (items: typeof mainMenu, groupTitle?: string) => {
     return (
       <div className="space-y-1.5 select-none">
@@ -116,6 +125,7 @@ export const CrmSidebar: React.FC = () => {
         <div className="p-4 space-y-6 flex-grow overflow-y-auto max-h-[calc(100vh-140px)]">
           {renderNavGroup(mainMenu, 'Executive')}
           {renderNavGroup(crmMenu, 'CRM Operations')}
+          {renderNavGroup(inventoryMenu, 'Inventory & Supply')}
         </div>
       </div>
 

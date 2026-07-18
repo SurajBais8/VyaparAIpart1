@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
 import { useOnboardingStore } from '../../store/onboardingStore';
+import { NotificationCenter } from '../notifications/NotificationCenter';
 import {
   Search,
   Bell,
@@ -250,11 +251,12 @@ export const CrmHeader: React.FC<CrmHeaderProps> = ({
           {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
         </button>
 
-        {/* Notifications Dropdown */}
-        <div className="relative" ref={notificationsRef}>
+        {/* Notifications Slide-out Drawer */}
+        <div className="relative">
           <button
-            onClick={() => setShowNotifications(!showNotifications)}
+            onClick={() => setShowNotifications(true)}
             className="p-1.5 h-9 w-9 rounded-xl border border-slate-200/40 dark:border-slate-850 hover:bg-slate-50 dark:hover:bg-slate-900 text-slate-400 hover:text-slate-650 cursor-pointer flex items-center justify-center transition-colors relative"
+            title="System Alerts Board"
           >
             <Bell className="w-4 h-4" />
             {unreadCount > 0 && (
@@ -262,40 +264,11 @@ export const CrmHeader: React.FC<CrmHeaderProps> = ({
             )}
           </button>
 
-          {showNotifications && (
-            <div className="absolute right-0 mt-2 w-80 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl overflow-hidden z-40 text-left">
-              <div className="p-3 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-850/80 flex justify-between items-center select-none">
-                <span className="text-[11px] font-black text-slate-700 dark:text-slate-350 uppercase tracking-widest font-mono">
-                  Notifications ({unreadCount})
-                </span>
-                {unreadCount > 0 && (
-                  <button onClick={handleMarkAllRead} className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer">
-                    Mark all read
-                  </button>
-                )}
-              </div>
-              <div className="divide-y divide-slate-100 dark:divide-slate-900 max-h-72 overflow-y-auto">
-                {notifications.map((n) => (
-                  <div
-                    key={n.id}
-                    onClick={() => handleNotificationClick(n.id)}
-                    className={`p-3.5 hover:bg-slate-50/50 dark:hover:bg-slate-900/30 cursor-pointer transition-colors ${n.unread ? 'bg-indigo-50/5 dark:bg-indigo-950/10' : ''}`}
-                  >
-                    <div className="flex justify-between items-start gap-2">
-                      <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200">{n.title}</h4>
-                      <span className="text-[9px] font-mono font-medium text-slate-400">{n.time}</span>
-                    </div>
-                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-light leading-relaxed">{n.desc}</p>
-                    {n.unread && (
-                      <span className="inline-flex items-center gap-1 mt-1 text-[8px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-mono">
-                        ● New alert
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          <NotificationCenter 
+            isOpen={showNotifications}
+            onClose={() => setShowNotifications(false)}
+            onUnreadCountChange={(count) => setUnreadCount(count)}
+          />
         </div>
 
         {/* Profile Dropdown */}

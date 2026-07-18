@@ -4,6 +4,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { dealService } from '../../services/deal.service';
 import { Card } from '../../components/ui';
 import { SearchBar } from '../../components/crm/SearchBar';
@@ -12,6 +13,7 @@ import { Plus, Coins, TrendingUp, Sparkles, Calendar, Trash2, ArrowRight } from 
 import { toast } from 'sonner';
 
 export const DealsWorkspace: React.FC = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [deals, setDeals] = useState<any[]>([]);
   const [filtered, setFiltered] = useState<any[]>([]);
@@ -118,16 +120,20 @@ export const DealsWorkspace: React.FC = () => {
             <Card
               key={deal.id}
               variant="glass"
-              className="p-5 border border-slate-200/50 dark:border-slate-850 hover:border-indigo-500/20 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4"
+              className="p-5 border border-slate-200/50 dark:border-slate-850 hover:border-indigo-500/25 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4 cursor-pointer"
+              onClick={() => navigate(`/crm/deals/${deal.id}`)}
             >
               <div className="flex justify-between items-start gap-3">
-                <div className="space-y-0.5">
-                  <h4 className="text-xs font-black text-slate-800 dark:text-slate-100 uppercase tracking-wide font-mono truncate max-w-[170px]">{deal.name}</h4>
+                <div className="space-y-0.5 text-left">
+                  <h4 className="text-xs font-black text-slate-800 dark:text-slate-100 uppercase tracking-wide font-mono truncate max-w-[170px] group-hover:text-indigo-650">{deal.name}</h4>
                   <span className="text-[10px] text-slate-400 font-semibold truncate max-w-[170px] block">{deal.company}</span>
                 </div>
 
                 <button
-                  onClick={() => handleDeleteDeal(deal.id, deal.name)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleDeleteDeal(deal.id, deal.name);
+                  }}
                   className="p-1 text-slate-400 hover:text-rose-500 cursor-pointer rounded"
                 >
                   <Trash2 className="w-3.5 h-3.5" />

@@ -37,10 +37,20 @@ import { LeadAnalytics } from './pages/crm/LeadAnalytics';
 import { CompaniesWorkspace } from './pages/crm/CompaniesWorkspace';
 import { CompanyProfile } from './pages/crm/CompanyProfile';
 import { ContactsWorkspace } from './pages/crm/ContactsWorkspace';
+import { ContactProfile } from './pages/crm/ContactProfile';
 import { DealsWorkspace } from './pages/crm/DealsWorkspace';
+import { DealProfile } from './pages/crm/DealProfile';
 import { ActivitiesWorkspace } from './pages/crm/ActivitiesWorkspace';
 import { AnalyticsWorkspace } from './pages/crm/AnalyticsWorkspace';
 import { ReportsWorkspace } from './pages/crm/ReportsWorkspace';
+
+// Inventory & Supply Workspaces
+import { InventoryWorkspace } from './pages/inventory/InventoryWorkspace';
+import { WarehousesWorkspace } from './pages/inventory/WarehousesWorkspace';
+import { TransfersWorkspace } from './pages/inventory/TransfersWorkspace';
+import { PurchaseWorkspace } from './pages/inventory/PurchaseWorkspace';
+import { SuppliersWorkspace } from './pages/inventory/SuppliersWorkspace';
+import { InventoryAnalytics } from './pages/inventory/InventoryAnalytics';
 
 // Router Wrapper for AuthLayout pages
 const AuthLayoutWrapper: React.FC = () => {
@@ -98,10 +108,20 @@ export default function App() {
             <Route path="/crm/companies" element={<CompaniesWorkspace />} />
             <Route path="/crm/companies/:id" element={<CompanyProfile />} />
             <Route path="/crm/contacts" element={<ContactsWorkspace />} />
+            <Route path="/crm/contacts/:id" element={<ContactProfile />} />
             <Route path="/crm/deals" element={<DealsWorkspace />} />
+            <Route path="/crm/deals/:id" element={<DealProfile />} />
             <Route path="/crm/activities" element={<ActivitiesWorkspace />} />
             <Route path="/crm/analytics" element={<AnalyticsWorkspace />} />
             <Route path="/crm/reports" element={<ReportsWorkspace />} />
+
+            {/* Inventory & Supply Routes */}
+            <Route path="/inventory/items" element={<InventoryWorkspace />} />
+            <Route path="/inventory/warehouses" element={<WarehousesWorkspace />} />
+            <Route path="/inventory/transfers" element={<TransfersWorkspace />} />
+            <Route path="/inventory/purchase" element={<PurchaseWorkspace />} />
+            <Route path="/inventory/suppliers" element={<SuppliersWorkspace />} />
+            <Route path="/inventory/analytics" element={<InventoryAnalytics />} />
           </Route>
 
           {/* Catch-all Redirect to Entry Splash */}

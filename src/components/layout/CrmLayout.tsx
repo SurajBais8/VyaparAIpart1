@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { CrmSidebar } from './CrmSidebar';
 import { CrmHeader } from './CrmHeader';
-import { CommandPalette } from './CommandPalette';
+import { SearchOverlay } from '../search/SearchOverlay';
 import { Button, Input } from '../ui';
 import { toast } from 'sonner';
 import { customerService } from '../../services/customer.service';
@@ -138,11 +138,10 @@ export const CrmLayout: React.FC = () => {
         </main>
       </div>
 
-      {/* Global Command Palette */}
-      <CommandPalette
+      {/* Global Search Overlay */}
+      <SearchOverlay
         isOpen={isCommandPaletteOpen}
         onClose={() => setIsCommandPaletteOpen(false)}
-        onOpenQuickForm={handleOpenQuickForm}
       />
 
       {/* Form Dialog Modals */}

@@ -4,14 +4,16 @@
  */
 
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { contactService } from '../../services/contact.service';
 import { DataTable } from '../../components/crm/DataTable';
 import { SearchBar } from '../../components/crm/SearchBar';
 import { Button } from '../../components/ui';
-import { Plus, Search, Contact2, Star, Trash2, Mail, MessageSquare } from 'lucide-react';
+import { Plus, Search, Contact2, Star, Trash2, Mail, MessageSquare, Eye } from 'lucide-react';
 import { toast } from 'sonner';
 
 export const ContactsWorkspace: React.FC = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [contacts, setContacts] = useState<any[]>([]);
   const [filtered, setFiltered] = useState<any[]>([]);
@@ -57,15 +59,25 @@ export const ContactsWorkspace: React.FC = () => {
       key: 'id',
       label: 'ID',
       sortable: true,
-      render: (row: any) => <span className="font-mono text-[10px] font-bold text-slate-400">{row.id}</span>
+      render: (row: any) => (
+        <span 
+          onClick={() => navigate(`/crm/contacts/${row.id}`)}
+          className="font-mono text-[10px] font-bold text-indigo-500 hover:underline cursor-pointer"
+        >
+          {row.id}
+        </span>
+      )
     },
     {
       key: 'name',
       label: 'Personnel Name',
       sortable: true,
       render: (row: any) => (
-        <div className="flex flex-col text-left">
-          <span className="font-bold text-slate-800 dark:text-slate-100">{row.name}</span>
+        <div 
+          onClick={() => navigate(`/crm/contacts/${row.id}`)}
+          className="flex flex-col text-left cursor-pointer group"
+        >
+          <span className="font-bold text-slate-800 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 group-hover:underline">{row.name}</span>
           <span className="text-[10px] text-slate-400 font-mono font-bold">{row.role}</span>
         </div>
       )
@@ -101,6 +113,11 @@ export const ContactsWorkspace: React.FC = () => {
   ];
 
   const actions = [
+    {
+      label: 'View Full Profile',
+      icon: <Eye className="w-3.5 h-3.5 text-indigo-500" />,
+      onClick: (row: any) => navigate(`/crm/contacts/${row.id}`)
+    },
     {
       label: 'Trigger Quick Email',
       icon: <Mail className="w-3.5 h-3.5 text-indigo-500" />,
