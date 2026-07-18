@@ -67,6 +67,18 @@ import PerformanceWorkspace from './features/hr/pages/PerformanceWorkspace';
 import DepartmentWorkspace from './features/hr/pages/DepartmentWorkspace';
 import HRReports from './features/hr/pages/HRReports';
 
+// Marketing Module 7 Workspaces
+import MarketingWorkspace from './features/marketing/pages/MarketingWorkspace';
+import CampaignWorkspace from './features/marketing/pages/CampaignWorkspace';
+import WhatsAppWorkspace from './features/marketing/pages/WhatsAppWorkspace';
+import EmailWorkspace from './features/marketing/pages/EmailWorkspace';
+import SMSWorkspace from './features/marketing/pages/SMSWorkspace';
+import AudienceWorkspace from './features/marketing/pages/AudienceWorkspace';
+import AutomationWorkspace from './features/marketing/pages/AutomationWorkspace';
+import TemplateWorkspace from './features/marketing/pages/TemplateWorkspace';
+import MarketingReports from './features/marketing/pages/MarketingReports';
+import AIMarketing from './features/marketing/pages/AIMarketing';
+
 // Router Wrapper for AuthLayout pages
 const AuthLayoutWrapper: React.FC = () => {
   return (
@@ -152,6 +164,18 @@ export default function App() {
             <Route path="/hr/performance" element={<PerformanceWorkspace />} />
             <Route path="/hr/departments" element={<DepartmentWorkspace />} />
             <Route path="/hr/reports" element={<HRReports />} />
+
+            {/* Marketing Module 7 Routes */}
+            <Route path="/marketing" element={<MarketingWorkspace />} />
+            <Route path="/marketing/campaigns" element={<CampaignWorkspace />} />
+            <Route path="/marketing/whatsapp" element={<WhatsAppWorkspace />} />
+            <Route path="/marketing/email" element={<EmailWorkspace />} />
+            <Route path="/marketing/sms" element={<SMSWorkspace />} />
+            <Route path="/marketing/audience" element={<AudienceWorkspace />} />
+            <Route path="/marketing/automation" element={<AutomationWorkspace />} />
+            <Route path="/marketing/templates" element={<TemplateWorkspace />} />
+            <Route path="/marketing/reports" element={<MarketingReports />} />
+            <Route path="/marketing/ai" element={<AIMarketing />} />
           </Route>
 
           {/* Catch-all Redirect to Entry Splash */}

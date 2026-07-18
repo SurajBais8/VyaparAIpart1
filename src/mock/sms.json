@@ -1,0 +1,34 @@
+[
+  {
+    "id": "SMS-001",
+    "recipient": "+91 99999 88888",
+    "message": "Hi Siddharth, your SaaS Enterprise subscription invoice is ready. Download at https://saas.io/inv/7718",
+    "status": "Delivered",
+    "timestamp": "2026-07-18T12:00:00Z",
+    "cost": 0.15
+  },
+  {
+    "id": "SMS-002",
+    "recipient": "+91 88888 77777",
+    "message": "Your one-time authorization token for your SaaS login is 884719. Expires in 10 minutes.",
+    "status": "Delivered",
+    "timestamp": "2026-07-18T11:45:00Z",
+    "cost": 0.15
+  },
+  {
+    "id": "SMS-003",
+    "recipient": "+91 77777 66666",
+    "message": "URGENT: Server CPU cluster reached 98% utilization. Active balancing is recommended immediately.",
+    "status": "Sent",
+    "timestamp": "2026-07-18T10:15:00Z",
+    "cost": 0.15
+  },
+  {
+    "id": "SMS-004",
+    "recipient": "+91 66666 55555",
+    "message": "Final warning: Your trial ends in 24 hours. Code LAST20 saves 20% on checkout.",
+    "status": "Failed",
+    "timestamp": "2026-07-17T09:00:00Z",
+    "cost": 0.0
+  }
+]

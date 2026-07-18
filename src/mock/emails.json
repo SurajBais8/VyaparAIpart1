@@ -1,0 +1,46 @@
+[
+  {
+    "id": "EM-001",
+    "from": "SaaS Marketing Core <marketing@enterprise.io>",
+    "to": "siddharth.sen@techcorp.com",
+    "subject": "Summer Tech Carnival Upgrade Opportunity",
+    "body": "Dear Siddharth, your cloud cluster is currently eligible for an immediate 30% performance scale up at no additional cost for the next 3 months. Click the link to review.",
+    "timestamp": "2026-07-18T10:30:00Z",
+    "status": "Outbox",
+    "sentTime": "2026-07-18T10:30:15Z",
+    "read": true
+  },
+  {
+    "id": "EM-002",
+    "from": "Rohan Gupta <rohan.gupta@fintechlabs.in>",
+    "to": "sales@enterprise.io",
+    "subject": "Inquiry regarding custom visual reporting API integration",
+    "body": "Hey there! We saw your Summer Tech announcement and wanted to know if your analytics widget allows white-labeling. Please get in touch.",
+    "timestamp": "2026-07-18T09:12:00Z",
+    "status": "Inbox",
+    "sentTime": null,
+    "read": false
+  },
+  {
+    "id": "EM-003",
+    "from": "SaaS Marketing Core <marketing@enterprise.io>",
+    "to": "neha.kapoor@marketing.io",
+    "subject": "[Draft] Welcoming our new Enterprise Cohort Users",
+    "body": "Hi {{name}}, welcome to the platform! We are thrilled to help you scale your operational databases. Reply if you need custom onboarding guidance.",
+    "timestamp": "2026-07-18T08:00:00Z",
+    "status": "Draft",
+    "sentTime": null,
+    "read": false
+  },
+  {
+    "id": "EM-004",
+    "from": "SaaS Marketing Core <marketing@enterprise.io>",
+    "to": "all-subscribers@broadcast.saas.io",
+    "subject": "Scheduled: Next-Gen Dev Portal Launch",
+    "body": "Hi everyone, tomorrow we are pushing our completely rebuilt developer playground with multi-language SDK runtimes.",
+    "timestamp": "2026-07-19T06:00:00Z",
+    "status": "Scheduled",
+    "sentTime": null,
+    "read": false
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "totalCampaigns": 12,
+  "activeCampaigns": 4,
+  "scheduledCampaigns": 3,
+  "completedCampaigns": 5,
+  "totalLeads": 28450,
+  "conversionRate": 16.8,
+  "emailSent": 182400,
+  "whatsAppSent": 45600,
+  "smsSent": 98200,
+  "channelPerformance": [
+    { "name": "Email", "sent": 182400, "delivered": 181200, "opened": 91400, "clicked": 25800, "conversion": 12.4 },
+    { "name": "WhatsApp", "sent": 45600, "delivered": 45550, "opened": 44100, "clicked": 18900, "conversion": 26.5 },
+    { "name": "SMS", "sent": 98200, "delivered": 95000, "opened": 93000, "clicked": 8400, "conversion": 6.8 }
+  ],
+  "campaignPerformance": [
+    { "name": "Summer Carnival", "leads": 380, "conversions": 145, "roi": 193.3 },
+    { "name": "UPI Autopay Notice", "leads": 0, "conversions": 0, "roi": 0 },
+    { "name": "Cold Re-engage SMS", "leads": 540, "conversions": 85, "roi": 833.3 },
+    { "name": "Q2 Appreciation", "leads": 180, "conversions": 120, "roi": 222.5 }
+  ],
+  "leadConversion": [
+    { "month": "Jan", "leads": 4200, "conversions": 520 },
+    { "month": "Feb", "leads": 4800, "conversions": 610 },
+    { "month": "Mar", "leads": 5100, "conversions": 740 },
+    { "month": "Apr", "leads": 5500, "conversions": 890 },
+    { "month": "May", "leads": 6200, "conversions": 1050 },
+    { "month": "Jun", "leads": 6900, "conversions": 1220 },
+    { "month": "Jul", "leads": 7400, "conversions": 1380 }
+  ],
+  "monthlyEngagement": [
+    { "month": "Jan", "email": 12000, "whatsapp": 3500, "sms": 7000 },
+    { "month": "Feb", "monthNum": 2, "email": 14000, "whatsapp": 4100, "sms": 8200 },
+    { "month": "Mar", "monthNum": 3, "email": 16500, "whatsapp": 4900, "sms": 9400 },
+    { "month": "Apr", "monthNum": 4, "email": 18000, "whatsapp": 5800, "sms": 11000 },
+    { "month": "May", "monthNum": 5, "email": 21000, "whatsapp": 6400, "sms": 12500 },
+    { "month": "Jun", "monthNum": 6, "email": 24000, "whatsapp": 7200, "sms": 14000 },
+    { "month": "Jul", "monthNum": 7, "email": 28000, "whatsapp": 8500, "sms": 16500 }
+  ]
+}

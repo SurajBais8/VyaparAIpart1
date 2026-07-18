@@ -1,0 +1,61 @@
+[
+  {
+    "id": "AUD-001",
+    "name": "All Active Customers",
+    "type": "Customer Segment",
+    "count": 15200,
+    "description": "Subscribers with an active paid invoice or valid plan in past 30 days.",
+    "filters": {
+      "status": "Active",
+      "plan": "Any"
+    },
+    "aiSuggestions": [
+      "Optimal channel is Email with 11:00 AM dispatch time.",
+      "High probability of cross-selling security certificates."
+    ]
+  },
+  {
+    "id": "AUD-002",
+    "name": "Premium Members",
+    "type": "Customer Segment",
+    "count": 1420,
+    "description": "High-value corporate clusters billing greater than ₹50,000 annually.",
+    "filters": {
+      "annualBilling": ">50000",
+      "loyaltyTier": "VIP"
+    },
+    "aiSuggestions": [
+      "Requires high-touch personalized communications.",
+      "WhatsApp channel yields a 92% response index here."
+    ]
+  },
+  {
+    "id": "AUD-003",
+    "name": "Cold Leads Q2",
+    "type": "Lead Segment",
+    "count": 8500,
+    "description": "Marketing leads captured during Q2 events that haven't converted to demo stage.",
+    "filters": {
+      "origin": "Q2 Web Summit",
+      "demoBooked": "false"
+    },
+    "aiSuggestions": [
+      "Offer a 30-day extended trial or aggressive coupon discount.",
+      "SMS works best as an abrupt short-format wake-up nudge."
+    ]
+  },
+  {
+    "id": "AUD-004",
+    "name": "SaaS Trial Signups",
+    "type": "Dynamic List",
+    "count": 2540,
+    "description": "Users who activated free trials within the last 14 days and have not subscribed.",
+    "filters": {
+      "onboardingStep": "Incomplete",
+      "trialRemaining": "<=7 days"
+    },
+    "aiSuggestions": [
+      "Trigger onboarding guide triggers automatically to reduce drop-off rates."
+    ]
+  }
+]

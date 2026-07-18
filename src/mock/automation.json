@@ -1,0 +1,106 @@
+[
+  {
+    "id": "FLOW-001",
+    "name": "High-Value Lead Onboarding",
+    "status": "Active",
+    "trigger": "New Lead Registered",
+    "conditions": "Budget > ₹50,000",
+    "actions": [
+      "Send VIP Welcome Email",
+      "Assign to Staff Account Executive"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "type": "trigger",
+        "name": "New Lead Signed Up",
+        "description": "Fires immediately when a contact registration occurs.",
+        "config": {
+          "source": "Landing Page Form"
+        }
+      },
+      {
+        "id": "step-2",
+        "type": "condition",
+        "name": "Enterprise Qualification Check",
+        "description": "Verifies if the reported budget size exceeds threshold limits.",
+        "config": {
+          "field": "budget",
+          "operator": ">",
+          "value": "50000"
+        }
+      },
+      {
+        "id": "step-3",
+        "type": "action",
+        "name": "Dispatch Email Campaign",
+        "description": "Dispatches VIP Welcome Template automatically.",
+        "config": {
+          "channel": "Email",
+          "templateId": "TEMP-EM-001"
+        }
+      },
+      {
+        "id": "step-4",
+        "type": "delay",
+        "name": "Operational Hold Period",
+        "description": "Holds the flow execution for 24 hours.",
+        "config": {
+          "duration": "24",
+          "unit": "hours"
+        }
+      },
+      {
+        "id": "step-5",
+        "type": "action",
+        "name": "WhatsApp Onboarding Nudge",
+        "description": "Follow up with a conversational personal assistant greeting.",
+        "config": {
+          "channel": "WhatsApp",
+          "templateId": "TEMP-WA-001"
+        }
+      }
+    ]
+  },
+  {
+    "id": "FLOW-002",
+    "name": "Trial Expiry Reminder Flow",
+    "status": "Inactive",
+    "trigger": "Trial Ends in 3 Days",
+    "conditions": "No Active Subscription",
+    "actions": [
+      "Send SMS Alert",
+      "Notify Account Manager"
+    ],
+    "steps": [
+      {
+        "id": "step-101",
+        "type": "trigger",
+        "name": "Trial Expiration Nudge",
+        "description": "Triggers 3 days before free trial expiration.",
+        "config": {
+          "daysBefore": "3"
+        }
+      },
+      {
+        "id": "step-102",
+        "type": "condition",
+        "name": "Conversion Check",
+        "description": "Validate if user remains in trial tier.",
+        "config": {
+          "hasPaid": "false"
+        }
+      },
+      {
+        "id": "step-103",
+        "type": "action",
+        "name": "SMS Warning Blast",
+        "description": "Sends short transactional SMS with a checkout coupon.",
+        "config": {
+          "channel": "SMS",
+          "templateId": "TEMP-SMS-001"
+        }
+      }
+    ]
+  }
+]

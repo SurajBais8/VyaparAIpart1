@@ -1,0 +1,38 @@
+[
+  {
+    "id": "TEMP-EM-001",
+    "name": "Enterprise Cloud Welcome Pack",
+    "type": "Email",
+    "category": "Transactional",
+    "subject": "🚀 Welcome to Next-Gen Cloud Platform, {{name}}!",
+    "content": "Hello {{name}},\n\nThank you for choosing our Enterprise suite. Your billing tier has been successfully initialized. Access your developer dashboard here:\n\nhttps://enterprise.io/dev-portal\n\nIf you have any questions, our support engineers are standing by.\n\nCheers,\nSaaS Support",
+    "variables": ["name"]
+  },
+  {
+    "id": "TEMP-EM-002",
+    "name": "Holiday Promotional Clearance",
+    "type": "Email",
+    "category": "Marketing",
+    "subject": "🎁 Special Festival Offer: Save 25% on annual developer billing",
+    "content": "Hi {{name}},\n\nUse code FESTIVAL25 during checkout before {{expiry_date}} and unlock deep cost savings across all databases!\n\nBest,\nSales Team",
+    "variables": ["name", "expiry_date"]
+  },
+  {
+    "id": "TEMP-WA-001",
+    "name": "Onboarding Verification Assistant",
+    "type": "WhatsApp",
+    "category": "Engagement",
+    "subject": "WhatsApp Template",
+    "content": "Hey {{name}}! Welcome aboard. Let's schedule your 10-minute master API integration walkthrough. Tap a button below to block our calendar! 📆",
+    "variables": ["name"]
+  },
+  {
+    "id": "TEMP-SMS-001",
+    "name": "High Urgency Account Recovery OTP",
+    "type": "SMS",
+    "category": "Transactional",
+    "subject": "SMS Template",
+    "content": "SaaS SECURITY: Your authentication code is {{otp_code}}. It is valid for exactly {{minutes}} minutes. Do not share this with anyone.",
+    "variables": ["otp_code", "minutes"]
+  }
+]

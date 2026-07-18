@@ -1,0 +1,75 @@
+[
+  {
+    "id": "WA-CH-001",
+    "contactName": "Arjun Sharma",
+    "phone": "+91 98765 43210",
+    "unread": 1,
+    "lastMessage": "Sounds great, can you share the invoice PDF?",
+    "lastUpdated": "2026-07-18T12:45:00Z",
+    "status": "Active",
+    "messages": [
+      {
+        "id": "msg-101",
+        "text": "Hello Arjun! We have updated your server limits as discussed.",
+        "sender": "agent",
+        "timestamp": "2026-07-18T12:30:00Z",
+        "mediaUrl": null,
+        "mediaType": null
+      },
+      {
+        "id": "msg-102",
+        "text": "Sounds great, can you share the invoice PDF?",
+        "sender": "customer",
+        "timestamp": "2026-07-18T12:45:00Z",
+        "mediaUrl": null,
+        "mediaType": null
+      }
+    ]
+  },
+  {
+    "id": "WA-CH-002",
+    "contactName": "Pooja Mehta",
+    "phone": "+91 87654 32109",
+    "unread": 0,
+    "lastMessage": "Yes, thank you! The code worked flawlessly.",
+    "lastUpdated": "2026-07-18T11:20:00Z",
+    "status": "Active",
+    "messages": [
+      {
+        "id": "msg-201",
+        "text": "Hi Pooja, use promo code RUSH25 to grab your discount.",
+        "sender": "agent",
+        "timestamp": "2026-07-18T11:10:00Z",
+        "mediaUrl": null,
+        "mediaType": null
+      },
+      {
+        "id": "msg-202",
+        "text": "Yes, thank you! The code worked flawlessly.",
+        "sender": "customer",
+        "timestamp": "2026-07-18T11:20:00Z",
+        "mediaUrl": null,
+        "mediaType": null
+      }
+    ]
+  },
+  {
+    "id": "WA-CH-003",
+    "contactName": "Vikram Adani",
+    "phone": "+91 76543 21098",
+    "unread": 0,
+    "lastMessage": "Welcome onboard!",
+    "lastUpdated": "2026-07-17T16:00:00Z",
+    "status": "Archived",
+    "messages": [
+      {
+        "id": "msg-301",
+        "text": "Welcome onboard!",
+        "sender": "agent",
+        "timestamp": "2026-07-17T16:00:00Z",
+        "mediaUrl": null,
+        "mediaType": null
+      }
+    ]
+  }
+]

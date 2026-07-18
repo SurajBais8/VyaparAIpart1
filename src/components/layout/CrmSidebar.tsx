@@ -19,7 +19,11 @@ import {
   Activity,
   Files,
   Sparkles,
-  Layers
+  Layers,
+  Mail,
+  MessageSquare,
+  Phone,
+  GitPullRequest
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -75,6 +79,19 @@ export const CrmSidebar: React.FC = () => {
     { title: 'Performance OKRs', path: '/hr/performance', icon: <Sparkles className="w-4 h-4" /> },
     { title: 'Departments & Org', path: '/hr/departments', icon: <Building2 className="w-4 h-4" /> },
     { title: 'HR Reports', path: '/hr/reports', icon: <Files className="w-4 h-4" /> },
+  ];
+
+  const marketingMenu = [
+    { title: 'Marketing Dashboard', path: '/marketing', icon: <TrendingUp className="w-4 h-4" /> },
+    { title: 'Campaigns Control', path: '/marketing/campaigns', icon: <Files className="w-4 h-4" /> },
+    { title: 'WhatsApp Desk', path: '/marketing/whatsapp', icon: <MessageSquare className="w-4 h-4" /> },
+    { title: 'Email Marketing', path: '/marketing/email', icon: <Mail className="w-4 h-4" /> },
+    { title: 'SMS Gateway', path: '/marketing/sms', icon: <Phone className="w-4 h-4" /> },
+    { title: 'Audience Segments', path: '/marketing/audience', icon: <Users2 className="w-4 h-4" /> },
+    { title: 'Automation Flows', path: '/marketing/automation', icon: <GitPullRequest className="w-4 h-4" /> },
+    { title: 'Stored Templates', path: '/marketing/templates', icon: <Files className="w-4 h-4" /> },
+    { title: 'Campaign Reports', path: '/marketing/reports', icon: <Files className="w-4 h-4" /> },
+    { title: 'AI Marketing Desk', path: '/marketing/ai', icon: <Sparkles className="w-4 h-4" /> },
   ];
 
   const renderNavGroup = (items: typeof mainMenu, groupTitle?: string) => {
@@ -145,6 +162,7 @@ export const CrmSidebar: React.FC = () => {
           {renderNavGroup(inventoryMenu, 'Inventory & Supply')}
           {renderNavGroup(financialMenu, 'Financials & BI')}
           {renderNavGroup(hrMenu, 'HRMS Module 6')}
+          {renderNavGroup(marketingMenu, 'Marketing & Comms')}
         </div>
       </div>
 
