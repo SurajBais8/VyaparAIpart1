@@ -1,0 +1,54 @@
+[
+  {
+    "id": "SUP-01",
+    "name": "Tata Tele Infra Ltd",
+    "code": "SUP-TATA",
+    "contactPerson": "Ravi Shankar",
+    "email": "procurement@tatateleinfra.com",
+    "phone": "+91 98765 43210",
+    "address": "Tata Communications Tower, BKC, Mumbai",
+    "status": "Preferred",
+    "rating": 4.8,
+    "notes": "Premium grade telecom supplier. Standard payment terms: Net-30. Consistent uptime & delivery.",
+    "payments": [
+      { "id": "PAY-101", "date": "2026-06-15", "amount": 1200000, "status": "Completed" },
+      { "id": "PAY-102", "date": "2026-07-05", "amount": 350000, "status": "Completed" }
+    ],
+    "documents": ["GST_Certificate.pdf", "Supplier_Agreement_2026.pdf"],
+    "aiSummary": "Tata Tele Infra Ltd has maintained a 98% on-time delivery rate over the last 12 months. Lead time stands at 4.2 days. Recommended for high-value hardware sourcing."
+  },
+  {
+    "id": "SUP-02",
+    "name": "Cognitive Solutions Pvt Ltd",
+    "code": "SUP-COGN",
+    "contactPerson": "Sneha Roy",
+    "email": "accounts@cognitivesolutions.co.in",
+    "phone": "+91 80 4455 6677",
+    "address": "Outer Ring Road, Bengaluru",
+    "status": "Active",
+    "rating": 4.5,
+    "notes": "SaaS and digital software license provider. Instant code generation & activation.",
+    "payments": [
+      { "id": "PAY-201", "date": "2026-07-01", "amount": 550000, "status": "Completed" }
+    ],
+    "documents": ["SaaS_Partner_Certificate.pdf"],
+    "aiSummary": "Cognitive Solutions delivers licensing products virtually instantaneously. Excellent customer service with an average response time of under 2 hours."
+  },
+  {
+    "id": "SUP-03",
+    "name": "Vellore Tech Importers",
+    "code": "SUP-VELLORE",
+    "contactPerson": "Prakash Raj",
+    "email": "prakash@velloretech.com",
+    "phone": "+91 416 222 3344",
+    "address": "Katpadi Road, Vellore, Tamil Nadu",
+    "status": "Reviewing",
+    "rating": 3.9,
+    "notes": "Niche routing accessories and endpoints importer. High transit variances.",
+    "payments": [
+      { "id": "PAY-301", "date": "2026-05-20", "amount": 80000, "status": "Completed" }
+    ],
+    "documents": ["Import_Export_License.pdf"],
+    "aiSummary": "Vellore Tech Importers has experienced shipping delays in 15% of recent shipments. Recommend setting a buffer of 10 days for orders or finding secondary backups."
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "TRSF-501",
+    "itemId": "PROD-001",
+    "itemName": "Premium Cloud Core Server V4",
+    "sku": "SRV-CLOUD-V4",
+    "sourceWarehouseId": "WH-01",
+    "sourceWarehouseName": "Mumbai Central Hub",
+    "destWarehouseId": "WH-03",
+    "destWarehouseName": "Chennai Storage Vault",
+    "quantity": 2,
+    "status": "Completed",
+    "date": "2026-07-10",
+    "timeline": [
+      { "date": "2026-07-09", "title": "Initiated", "description": "Transfer initiated by Rajesh Nair" },
+      { "date": "2026-07-10", "title": "In Transit", "description": "Shipped via BlueDart Logistics" },
+      { "date": "2026-07-10", "title": "Received", "description": "Received and signed off by Karthik Raja" }
+    ]
+  },
+  {
+    "id": "TRSF-502",
+    "itemId": "PROD-003",
+    "itemName": "FIPS 140-2 Encryption Shield",
+    "sku": "SEC-FIPS-HSM",
+    "sourceWarehouseId": "WH-03",
+    "sourceWarehouseName": "Chennai Storage Vault",
+    "destWarehouseId": "WH-01",
+    "destWarehouseName": "Mumbai Central Hub",
+    "quantity": 5,
+    "status": "In Transit",
+    "date": "2026-07-16",
+    "timeline": [
+      { "date": "2026-07-15", "title": "Initiated", "description": "Transfer request by Mumbai depot" },
+      { "date": "2026-07-16", "title": "Shipped", "description": "Picked up from Chennai warehouse vault" }
+    ]
+  },
+  {
+    "id": "TRSF-503",
+    "itemId": "PROD-004",
+    "itemName": "Unlimited Sync Endpoint Node",
+    "sku": "NODE-SYNC-UNL",
+    "sourceWarehouseId": "WH-02",
+    "sourceWarehouseName": "Bengaluru Cloud Node",
+    "destWarehouseId": "WH-03",
+    "destWarehouseName": "Chennai Storage Vault",
+    "quantity": 10,
+    "status": "Pending",
+    "date": "2026-07-18",
+    "timeline": [
+      { "date": "2026-07-18", "title": "Created", "description": "Awaiting approval from Ananya Rao" }
+    ]
+  }
+]

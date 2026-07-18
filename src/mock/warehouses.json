@@ -1,0 +1,41 @@
+[
+  {
+    "id": "WH-01",
+    "name": "Mumbai Central Hub",
+    "code": "MUM-HUB-01",
+    "location": "Bandra Kurla Complex, Mumbai",
+    "capacityLevel": 450,
+    "maxCapacity": 1000,
+    "manager": "Rajesh Nair",
+    "status": "Active",
+    "employees": ["Amit Sharma", "Pooja Patel", "Rohan Sen"],
+    "stockValue": 8500000,
+    "recentTransfers": ["TRSF-501", "TRSF-502"]
+  },
+  {
+    "id": "WH-02",
+    "name": "Bengaluru Cloud Node",
+    "code": "BLR-NODE-02",
+    "location": "Whitefield Industrial Area, Bengaluru",
+    "capacityLevel": 820,
+    "maxCapacity": 900,
+    "manager": "Ananya Rao",
+    "status": "Active",
+    "employees": ["Suresh Kumar", "Divya Hedge"],
+    "stockValue": 3100000,
+    "recentTransfers": ["TRSF-503"]
+  },
+  {
+    "id": "WH-03",
+    "name": "Chennai Storage Vault",
+    "code": "CHN-VAULT-03",
+    "location": "Guindy Highway, Chennai",
+    "capacityLevel": 150,
+    "maxCapacity": 800,
+    "manager": "Karthik Raja",
+    "status": "Active",
+    "employees": ["Nikhil Das", "Vignesh Balan"],
+    "stockValue": 1250000,
+    "recentTransfers": ["TRSF-501", "TRSF-502", "TRSF-503"]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "totalProducts": 5,
+  "totalWarehouses": 3,
+  "totalSuppliers": 3,
+  "inventoryValue": 12850000,
+  "lowStock": 2,
+  "outOfStock": 0,
+  "pendingPurchaseOrders": 2,
+  "pendingTransfers": 1,
+  "recentActivities": [
+    { "id": "ACT-01", "type": "Transfer", "description": "Stock Transfer TRSF-503 pending from Bengaluru to Chennai", "timestamp": "2026-07-18T11:00:00Z" },
+    { "id": "ACT-02", "type": "Purchase", "description": "New Purchase Order PO-901 raised with Tata Tele Infra Ltd", "timestamp": "2026-07-17T14:30:00Z" },
+    { "id": "ACT-03", "type": "Stock Update", "description": "SKU SRV-CLOUD-V4 adjusted manually (+2 units)", "timestamp": "2026-07-15T09:15:00Z" }
+  ]
+}

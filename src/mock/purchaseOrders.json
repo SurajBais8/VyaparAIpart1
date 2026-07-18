@@ -1,0 +1,75 @@
+[
+  {
+    "id": "PO-901",
+    "supplierId": "SUP-01",
+    "supplierName": "Tata Tele Infra Ltd",
+    "warehouseId": "WH-01",
+    "warehouseName": "Mumbai Central Hub",
+    "products": [
+      { "productId": "PROD-001", "name": "Premium Cloud Core Server V4", "quantity": 5, "unitPrice": 120000, "total": 600000 }
+    ],
+    "quantity": 5,
+    "amount": 600000,
+    "expectedDate": "2026-07-25",
+    "status": "Pending Approval",
+    "createdDate": "2026-07-17",
+    "documents": ["PO_Draft_901.pdf"],
+    "approvalHistory": [
+      { "step": "Created PO Draft", "by": "Rohan Sen (Procurement Officer)", "date": "2026-07-17T10:00:00Z", "status": "Done" },
+      { "step": "Awaiting CFO Approval", "by": "Amit Sharma (Financial Controller)", "date": "2026-07-17T11:30:00Z", "status": "Pending" }
+    ],
+    "timeline": [
+      { "date": "2026-07-17", "title": "Purchase Order Created", "description": "PO Draft initiated by Procurement Officer" }
+    ]
+  },
+  {
+    "id": "PO-902",
+    "supplierId": "SUP-02",
+    "supplierName": "Cognitive Solutions Pvt Ltd",
+    "warehouseId": "WH-02",
+    "warehouseName": "Bengaluru Cloud Node",
+    "products": [
+      { "productId": "PROD-002", "name": "Enterprise AI Agent Module", "quantity": 10, "unitPrice": 65000, "total": 650000 }
+    ],
+    "quantity": 10,
+    "amount": 650000,
+    "expectedDate": "2026-07-20",
+    "status": "Approved",
+    "createdDate": "2026-07-16",
+    "documents": ["PO_Approved_902.pdf"],
+    "approvalHistory": [
+      { "step": "Created PO Draft", "by": "Rohan Sen (Procurement Officer)", "date": "2026-07-16T09:00:00Z", "status": "Done" },
+      { "step": "Financial Approval", "by": "Amit Sharma (Financial Controller)", "date": "2026-07-16T12:00:00Z", "status": "Done" },
+      { "step": "Executive Approval", "by": "CEO", "date": "2026-07-16T14:00:00Z", "status": "Done" }
+    ],
+    "timeline": [
+      { "date": "2026-07-16", "title": "Draft Initialized", "description": "Draft initiated for 10 units" },
+      { "date": "2026-07-16", "title": "CFO Approved", "description": "Approved with digital stamp" },
+      { "date": "2026-07-16", "title": "Transmitted to Vendor", "description": "PO PDF emailed to sn@cognitivesolutions.co.in" }
+    ]
+  },
+  {
+    "id": "PO-903",
+    "supplierId": "SUP-03",
+    "supplierName": "Vellore Tech Importers",
+    "warehouseId": "WH-03",
+    "warehouseName": "Chennai Storage Vault",
+    "products": [
+      { "productId": "PROD-004", "name": "Unlimited Sync Endpoint Node", "quantity": 2, "unitPrice": 38000, "total": 76000 }
+    ],
+    "quantity": 2,
+    "amount": 76000,
+    "expectedDate": "2026-07-14",
+    "status": "Received",
+    "createdDate": "2026-07-10",
+    "documents": ["Invoice_Vellore_903.pdf", "Goods_Receipt_903.pdf"],
+    "approvalHistory": [
+      { "step": "Approved", "by": "Amit Sharma", "date": "2026-07-10T15:00:00Z", "status": "Done" }
+    ],
+    "timeline": [
+      { "date": "2026-07-10", "title": "PO Created & Sent", "description": "PO-903 authorized" },
+      { "date": "2026-07-14", "title": "Goods Delivered", "description": "Delivered to Chennai vault coordinate C-4" },
+      { "date": "2026-07-14", "title": "Received and Verified", "description": "Units matched SKU specifications. Stock levels updated." }
+    ]
+  }
+]
