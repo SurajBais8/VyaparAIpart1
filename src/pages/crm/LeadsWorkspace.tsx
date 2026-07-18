@@ -6,7 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { leadService } from '../../services/lead.service';
-import { KanbanBoard } from '../../components/crm/KanbanBoard';
+import { LeadPipeline } from '../../components/crm/LeadPipeline';
 import { DataTable } from '../../components/crm/DataTable';
 import { SearchBar } from '../../components/crm/SearchBar';
 import { FilterPanel } from '../../components/crm/FilterPanel';
@@ -262,17 +262,13 @@ export const LeadsWorkspace: React.FC = () => {
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600" />
         </div>
       ) : viewMode === 'board' ? (
-        <KanbanBoard
-          columns={columns}
-          items={filtered}
+        <LeadPipeline
+          leads={filtered}
           onStageChange={handleStageChange}
           onItemClick={(item) => navigate(`/crm/leads/${item.id}`)}
-          onAddItemClick={(stageId) => {
+          onAddLeadClick={(stageId) => {
             window.dispatchEvent(new CustomEvent('crm-quick-add', { detail: 'lead' }));
           }}
-          itemRender={(item) => (
-            <LeadCard lead={item} onClick={() => navigate(`/crm/leads/${item.id}`)} />
-          )}
         />
       ) : filtered.length > 0 ? (
         <DataTable

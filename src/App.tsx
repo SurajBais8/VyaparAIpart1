@@ -25,10 +25,15 @@ import { OnboardingScreen } from './pages/OnboardingScreen';
 // Workspaces
 import { DashboardOverview } from './pages/dashboard/DashboardOverview';
 import { DashboardReports } from './pages/dashboard/DashboardReports';
+import { DashboardRevenue } from './pages/dashboard/DashboardRevenue';
+import { DashboardOrders } from './pages/dashboard/DashboardOrders';
+import { DashboardCustomers } from './pages/dashboard/DashboardCustomers';
+import { DashboardLeads } from './pages/dashboard/DashboardLeads';
 import { CustomersWorkspace } from './pages/crm/CustomersWorkspace';
 import { CustomerProfile } from './pages/crm/CustomerProfile';
 import { LeadsWorkspace } from './pages/crm/LeadsWorkspace';
 import { LeadProfile } from './pages/crm/LeadProfile';
+import { LeadAnalytics } from './pages/crm/LeadAnalytics';
 import { CompaniesWorkspace } from './pages/crm/CompaniesWorkspace';
 import { CompanyProfile } from './pages/crm/CompanyProfile';
 import { ContactsWorkspace } from './pages/crm/ContactsWorkspace';
@@ -79,11 +84,16 @@ export default function App() {
             <Route path="/dashboard" element={<Navigate to="/dashboard/overview" replace />} />
             <Route path="/dashboard/overview" element={<DashboardOverview />} />
             <Route path="/dashboard/reports" element={<DashboardReports />} />
+            <Route path="/dashboard/revenue" element={<DashboardRevenue />} />
+            <Route path="/dashboard/orders" element={<DashboardOrders />} />
+            <Route path="/dashboard/customers" element={<DashboardCustomers />} />
+            <Route path="/dashboard/leads" element={<DashboardLeads />} />
 
             <Route path="/crm" element={<Navigate to="/crm/customers" replace />} />
             <Route path="/crm/customers" element={<CustomersWorkspace />} />
             <Route path="/crm/customers/:id" element={<CustomerProfile />} />
             <Route path="/crm/leads" element={<LeadsWorkspace />} />
+            <Route path="/crm/leads/analytics" element={<LeadAnalytics />} />
             <Route path="/crm/leads/:id" element={<LeadProfile />} />
             <Route path="/crm/companies" element={<CompaniesWorkspace />} />
             <Route path="/crm/companies/:id" element={<CompanyProfile />} />

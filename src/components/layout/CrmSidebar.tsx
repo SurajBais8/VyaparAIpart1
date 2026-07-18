@@ -32,7 +32,11 @@ export const CrmSidebar: React.FC = () => {
   const activeBusinessName = businessInfo.businessName || "SaaS Enterprise";
 
   const mainMenu = [
-    { title: 'Dashboard', path: '/dashboard/overview', icon: <TrendingUp className="w-4 h-4" /> },
+    { title: 'Overview', path: '/dashboard/overview', icon: <TrendingUp className="w-4 h-4" /> },
+    { title: 'Revenue Analytics', path: '/dashboard/revenue', icon: <Coins className="w-4 h-4" /> },
+    { title: 'Order Fulfilment', path: '/dashboard/orders', icon: <Activity className="w-4 h-4" /> },
+    { title: 'Customer Growth', path: '/dashboard/customers', icon: <Users2 className="w-4 h-4" /> },
+    { title: 'Sourcing & Leads', path: '/dashboard/leads', icon: <GitBranch className="w-4 h-4" /> },
     { title: 'Performance Reports', path: '/dashboard/reports', icon: <Files className="w-4 h-4" /> },
   ];
 

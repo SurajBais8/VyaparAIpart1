@@ -8,6 +8,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { customerService } from '../../services/customer.service';
 import { Timeline } from '../../components/crm/Timeline';
 import { Card } from '../../components/ui';
+
+// Sub-components for expanded customer tabs
+import { CustomerOrders } from './CustomerOrders';
+import { CustomerInvoices } from './CustomerInvoices';
+import { CustomerPayments } from './CustomerPayments';
+import { CustomerDocuments } from './CustomerDocuments';
+import { CustomerAISummary } from './CustomerAISummary';
+
 import {
   ArrowLeft,
   Building2,
@@ -20,7 +28,9 @@ import {
   CreditCard,
   Notebook,
   Send,
-  Star
+  Star,
+  Settings,
+  Activity
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -29,7 +39,7 @@ export const CustomerProfile: React.FC = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [customer, setCustomer] = useState<any>(null);
-  const [activeTab, setActiveTab] = useState<'timeline' | 'invoices' | 'payments' | 'documents'>('timeline');
+  const [activeTab, setActiveTab] = useState<'orders' | 'invoices' | 'payments' | 'timeline' | 'documents' | 'activities' | 'aiSummary' | 'settings'>('timeline');
   const [newNote, setNewNote] = useState('');
 
   const fetchCustomer = async () => {
@@ -186,14 +196,23 @@ export const CustomerProfile: React.FC = () => {
 
         {/* Right Side: Tab panel view list */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-slate-100 dark:bg-slate-900 p-1 rounded-xl flex items-center border border-slate-200/50 dark:border-slate-850 w-fit text-[11px] font-bold">
-            {(['timeline', 'invoices', 'payments', 'documents'] as const).map((tab) => (
+          <div className="bg-slate-100 dark:bg-slate-900 p-1 rounded-xl flex items-center gap-1 border border-slate-200/50 dark:border-slate-850 overflow-x-auto max-w-full no-scrollbar text-[11px] font-bold">
+            {([
+              { id: 'timeline', label: 'Timeline' },
+              { id: 'orders', label: 'Orders' },
+              { id: 'invoices', label: 'Invoices' },
+              { id: 'payments', label: 'Payments' },
+              { id: 'documents', label: 'Documents' },
+              { id: 'activities', label: 'Activities' },
+              { id: 'aiSummary', label: 'AI Summary' },
+              { id: 'settings', label: 'Settings' }
+            ] as const).map((tab) => (
               <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 rounded-lg capitalize transition-all cursor-pointer ${activeTab === tab ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-3xs font-extrabold' : 'text-slate-500 hover:text-slate-800'}`}
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${activeTab === tab.id ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-3xs font-extrabold' : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'}`}
               >
-                {tab}
+                {tab.label}
               </button>
             ))}
           </div>
@@ -227,82 +246,95 @@ export const CustomerProfile: React.FC = () => {
               </div>
             )}
 
-            {/* Invoices Mock */}
+            {/* Orders Subcomponent */}
+            {activeTab === 'orders' && (
+              <CustomerOrders customerId={customer.id} />
+            )}
+
+            {/* Invoices Subcomponent */}
             {activeTab === 'invoices' && (
-              <div className="space-y-4">
-                <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block">Billed Invoice Logs</span>
-                <div className="divide-y divide-slate-100 dark:divide-slate-900 space-y-3">
-                  {(customer.profile?.invoices || []).map((inv: any) => (
-                    <div key={inv.id} className="flex justify-between items-center py-2.5 text-xs">
-                      <div className="text-left space-y-0.5">
-                        <span className="font-bold text-slate-750 dark:text-slate-250 block font-mono">{inv.id}</span>
-                        <span className="text-[10px] text-slate-400 font-light block">Billed: {inv.date}</span>
-                      </div>
-                      <div className="text-right space-y-1">
-                        <span className="font-extrabold text-slate-800 dark:text-slate-100 font-mono">₹{inv.amount.toLocaleString()}</span>
-                        <span className={`block px-1.5 py-0.5 rounded text-[9px] font-bold font-mono tracking-wide uppercase border
-                          ${inv.status === 'Paid'
-                            ? 'bg-emerald-500/10 text-emerald-600 border-emerald-500/10'
-                            : 'bg-rose-500/10 text-rose-600 border-rose-500/10'}`}
-                        >
-                          {inv.status}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                  {(!customer.profile?.invoices || customer.profile.invoices.length === 0) && (
-                    <p className="text-xs text-slate-400 italic py-6">No invoices created for this profile.</p>
-                  )}
-                </div>
-              </div>
+              <CustomerInvoices customerId={customer.id} />
             )}
 
-            {/* Payments Mock */}
+            {/* Payments Subcomponent */}
             {activeTab === 'payments' && (
+              <CustomerPayments customerId={customer.id} outstandingAmount={customer.outstandingAmount} />
+            )}
+
+            {/* Documents Subcomponent */}
+            {activeTab === 'documents' && (
+              <CustomerDocuments customerId={customer.id} />
+            )}
+
+            {/* Activities Stream View */}
+            {activeTab === 'activities' && (
               <div className="space-y-4">
-                <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block">Settlement Inflow Records</span>
-                <div className="divide-y divide-slate-100 dark:divide-slate-900 space-y-3">
-                  {(customer.profile?.payments || []).map((pay: any) => (
-                    <div key={pay.id} className="flex justify-between items-center py-2.5 text-xs">
-                      <div className="text-left space-y-0.5">
-                        <span className="font-bold text-slate-750 dark:text-slate-250 block font-mono">{pay.id}</span>
-                        <span className="text-[10px] text-slate-450 block font-medium">Method: {pay.method} ({pay.date})</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block">Operational Activities Log</span>
+                <div className="space-y-3.5">
+                  {[
+                    { title: 'Contract Renewal Completed', desc: 'SaaS SLA agreement successfully signed off for Year 2026.', user: 'Jane Smith', date: 'Yesterday' },
+                    { title: 'Dunning Alert Bypassed', desc: 'Outstanding fee warning deferred by finance manager.', user: 'John Doe', date: '3 days ago' },
+                    { title: 'Onboarding Training Walkthrough', desc: 'Delivered customized console tutorials to their core development team.', user: 'John Doe', date: '5 days ago' }
+                  ].map((act, idx) => (
+                    <div key={idx} className="p-3 bg-white dark:bg-slate-950/40 border border-slate-150 dark:border-slate-850/60 rounded-xl text-xs text-left flex justify-between items-start">
+                      <div className="space-y-1">
+                        <span className="font-bold text-slate-800 dark:text-slate-100 block flex items-center gap-1.5">
+                          <Activity className="w-3.5 h-3.5 text-indigo-500" />
+                          {act.title}
+                        </span>
+                        <p className="text-slate-500 dark:text-slate-450">{act.desc}</p>
+                        <span className="text-[9px] text-slate-400 block font-mono">Logged by: {act.user}</span>
                       </div>
-                      <span className="font-extrabold text-emerald-600 font-mono">₹{pay.amount.toLocaleString()}</span>
+                      <span className="font-mono text-[9px] text-slate-400 shrink-0">{act.date}</span>
                     </div>
                   ))}
-                  {(!customer.profile?.payments || customer.profile.payments.length === 0) && (
-                    <p className="text-xs text-slate-400 italic py-6">No payments captured for this profile.</p>
-                  )}
                 </div>
               </div>
             )}
 
-            {/* Documents Mock */}
-            {activeTab === 'documents' && (
-              <div className="space-y-4">
-                <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-wider block">Shared Business Documents</span>
-                <div className="divide-y divide-slate-100 dark:divide-slate-900 space-y-3">
-                  {(customer.profile?.documents || []).map((doc: any, i: number) => (
-                    <div key={i} className="flex justify-between items-center py-2.5 text-xs">
-                      <div className="text-left space-y-0.5 flex items-center gap-2">
-                        <FileText className="w-5 h-5 text-indigo-500 flex-shrink-0" />
-                        <div>
-                          <span className="font-bold text-slate-750 dark:text-slate-250 block">{doc.name}</span>
-                          <span className="text-[10px] text-slate-400 font-mono font-medium block">Key: {doc.id}</span>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => toast.success(`Preparing securely signed download link for "${doc.name}"...`)}
-                        className="text-indigo-600 hover:underline font-bold cursor-pointer font-mono"
-                      >
-                        Download
-                      </button>
+            {/* AI Summary Subcomponent */}
+            {activeTab === 'aiSummary' && (
+              <CustomerAISummary customer={customer} />
+            )}
+
+            {/* Settings View */}
+            {activeTab === 'settings' && (
+              <div className="space-y-5 text-left">
+                <div>
+                  <h3 className="text-xs font-black text-slate-700 dark:text-slate-200 uppercase tracking-wider font-mono flex items-center gap-1.5">
+                    <Settings className="w-4 h-4 text-slate-450" /> Client Profile Control
+                  </h3>
+                  <p className="text-[10px] text-slate-400 font-light mt-0.5">
+                    Configure priority alert states, custom billing schedules, and ledger access conditions.
+                  </p>
+                </div>
+
+                <div className="space-y-3.5 pt-2">
+                  <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-950/30 border border-slate-150 dark:border-slate-850/60 rounded-xl text-xs">
+                    <div>
+                      <span className="font-bold text-slate-800 dark:text-slate-200 block">Mark as Premium VIP Clientele</span>
+                      <span className="text-[9px] text-slate-400 block font-light">Enables custom support lines and SLA priority guarantees.</span>
                     </div>
-                  ))}
-                  {(!customer.profile?.documents || customer.profile.documents.length === 0) && (
-                    <p className="text-xs text-slate-400 italic py-6">No documents uploaded.</p>
-                  )}
+                    <button 
+                      onClick={() => toast.success('Client marked as VIP Premium!')}
+                      className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white font-mono text-[9px] font-bold uppercase rounded-lg cursor-pointer"
+                    >
+                      Enable
+                    </button>
+                  </div>
+
+                  <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-950/30 border border-slate-150 dark:border-slate-850/60 rounded-xl text-xs">
+                    <div>
+                      <span className="font-bold text-slate-800 dark:text-slate-200 block">Dunning Auto-Suspension Toggles</span>
+                      <span className="text-[9px] text-slate-400 block font-light">Automatically suspends accounts on late outstanding payments.</span>
+                    </div>
+                    <button 
+                      onClick={() => toast.success('Auto-suspension dunning thresholds updated!')}
+                      className="px-3 py-1 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 font-mono text-[9px] font-bold uppercase rounded-lg cursor-pointer text-slate-700 dark:text-slate-300"
+                    >
+                      Configure
+                    </button>
+                  </div>
                 </div>
               </div>
             )}
