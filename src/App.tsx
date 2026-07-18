@@ -52,6 +52,10 @@ import { PurchaseWorkspace } from './pages/inventory/PurchaseWorkspace';
 import { SuppliersWorkspace } from './pages/inventory/SuppliersWorkspace';
 import { InventoryAnalytics } from './pages/inventory/InventoryAnalytics';
 
+// Financial & Business Intelligence Workspaces
+import AccountingWorkspace from './features/accounting/pages/AccountingWorkspace';
+import AnalyticsWorkspaceBI from './features/analytics/pages/AnalyticsWorkspace';
+
 // Router Wrapper for AuthLayout pages
 const AuthLayoutWrapper: React.FC = () => {
   return (
@@ -122,6 +126,10 @@ export default function App() {
             <Route path="/inventory/purchase" element={<PurchaseWorkspace />} />
             <Route path="/inventory/suppliers" element={<SuppliersWorkspace />} />
             <Route path="/inventory/analytics" element={<InventoryAnalytics />} />
+
+            {/* Financials & Business Intelligence */}
+            <Route path="/accounting" element={<AccountingWorkspace />} />
+            <Route path="/analytics" element={<AnalyticsWorkspaceBI />} />
           </Route>
 
           {/* Catch-all Redirect to Entry Splash */}

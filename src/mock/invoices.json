@@ -1,0 +1,125 @@
+[
+  {
+    "id": "INV-2026-001",
+    "customerName": "Acme Corp",
+    "customerEmail": "billing@acme.com",
+    "gstNumber": "27AAACA1234A1Z1",
+    "invoiceDate": "2026-07-01",
+    "dueDate": "2026-07-15",
+    "subTotal": 150000,
+    "cgst": 13500,
+    "sgst": 13500,
+    "igst": 0,
+    "totalAmount": 177000,
+    "status": "Paid",
+    "paymentStatus": "Paid",
+    "paymentMethod": "UPI",
+    "items": [
+      { "description": "Cloud Servers Deployment", "quantity": 1, "rate": 100000, "gstRate": 18, "amount": 100000 },
+      { "description": "Hardware Security Modules", "quantity": 2, "rate": 25000, "gstRate": 18, "amount": 50000 }
+    ],
+    "timeline": [
+      { "status": "Draft", "date": "2026-07-01T10:00:00.000Z", "details": "Invoice created as draft" },
+      { "status": "Sent", "date": "2026-07-01T11:30:00.000Z", "details": "Emailed to billing@acme.com" },
+      { "status": "Paid", "date": "2026-07-05T14:20:00.000Z", "details": "Payment received via UPI" }
+    ],
+    "notes": "Payment processed successfully. Standard 1-year hardware warranty is applicable."
+  },
+  {
+    "id": "INV-2026-002",
+    "customerName": "Globex Solutions",
+    "customerEmail": "accounts@globex.in",
+    "gstNumber": "07AABCG7890C2Z2",
+    "invoiceDate": "2026-07-05",
+    "dueDate": "2026-07-20",
+    "subTotal": 85000,
+    "cgst": 0,
+    "sgst": 0,
+    "igst": 15300,
+    "totalAmount": 100300,
+    "status": "Unpaid",
+    "paymentStatus": "Pending",
+    "paymentMethod": "NetBanking",
+    "items": [
+      { "description": "Enterprise Software Licensing", "quantity": 5, "rate": 17000, "gstRate": 18, "amount": 85000 }
+    ],
+    "timeline": [
+      { "status": "Draft", "date": "2026-07-05T09:15:00.000Z", "details": "Invoice created as draft" },
+      { "status": "Sent", "date": "2026-07-05T10:00:00.000Z", "details": "Emailed to accounts@globex.in" }
+    ],
+    "notes": "IGST applied for interstate transaction."
+  },
+  {
+    "id": "INV-2026-003",
+    "customerName": "Initech Systems",
+    "customerEmail": "billing@initech.co.in",
+    "gstNumber": "24AAECI9988E2Z5",
+    "invoiceDate": "2026-06-15",
+    "dueDate": "2026-06-30",
+    "subTotal": 45000,
+    "cgst": 4050,
+    "sgst": 4050,
+    "igst": 0,
+    "totalAmount": 53100,
+    "status": "Overdue",
+    "paymentStatus": "Unpaid",
+    "paymentMethod": "None",
+    "items": [
+      { "description": "Premium Routing Equipment", "quantity": 3, "rate": 15000, "gstRate": 18, "amount": 45000 }
+    ],
+    "timeline": [
+      { "status": "Draft", "date": "2026-06-15T08:00:00.000Z", "details": "Invoice created as draft" },
+      { "status": "Sent", "date": "2026-06-15T12:00:00.000Z", "details": "Emailed to billing@initech.co.in" },
+      { "status": "Overdue", "date": "2026-06-30T23:59:59.000Z", "details": "Due date passed without payment" }
+    ],
+    "notes": "Follow-up email sent. Customer requested 5 days extension."
+  },
+  {
+    "id": "INV-2026-004",
+    "customerName": "Umbrella Corp",
+    "customerEmail": "accounts@umbrella.com",
+    "gstNumber": "29AABCU4567C3Z3",
+    "invoiceDate": "2026-07-10",
+    "dueDate": "2026-07-25",
+    "subTotal": 200000,
+    "cgst": 18000,
+    "sgst": 18000,
+    "igst": 0,
+    "totalAmount": 236000,
+    "status": "Draft",
+    "paymentStatus": "Pending",
+    "paymentMethod": "None",
+    "items": [
+      { "description": "Network Infrastructure Setup", "quantity": 1, "rate": 200000, "gstRate": 18, "amount": 200000 }
+    ],
+    "timeline": [
+      { "status": "Draft", "date": "2026-07-10T15:45:00.000Z", "details": "Invoice created as draft" }
+    ],
+    "notes": "Awaiting approval from CFO."
+  },
+  {
+    "id": "INV-2026-005",
+    "customerName": "Wayne Enterprises",
+    "customerEmail": "bruce@waynecorp.com",
+    "gstNumber": "19AAACW1122W1Z4",
+    "invoiceDate": "2026-07-02",
+    "dueDate": "2026-07-17",
+    "subTotal": 310000,
+    "cgst": 0,
+    "sgst": 0,
+    "igst": 55800,
+    "totalAmount": 365800,
+    "status": "Paid",
+    "paymentStatus": "Paid",
+    "paymentMethod": "Bank Transfer",
+    "items": [
+      { "description": "Custom Satellite Link Routers", "quantity": 2, "rate": 155000, "gstRate": 18, "amount": 310000 }
+    ],
+    "timeline": [
+      { "status": "Draft", "date": "2026-07-02T10:00:00.000Z", "details": "Invoice created as draft" },
+      { "status": "Sent", "date": "2026-07-02T11:00:00.000Z", "details": "Emailed to bruce@waynecorp.com" },
+      { "status": "Paid", "date": "2026-07-03T09:00:00.000Z", "details": "Payment received via Bank Transfer" }
+    ],
+    "notes": "Confidential order details secured."
+  }
+]

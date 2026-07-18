@@ -1,0 +1,46 @@
+[
+  {
+    "id": "PAY-1001",
+    "invoiceId": "INV-2026-001",
+    "customerName": "Acme Corp",
+    "amount": 177000,
+    "method": "UPI",
+    "status": "Completed",
+    "date": "2026-07-05",
+    "referenceNo": "UPI891238479812",
+    "notes": "Full payment received for INV-2026-001"
+  },
+  {
+    "id": "PAY-1002",
+    "invoiceId": "INV-2026-005",
+    "customerName": "Wayne Enterprises",
+    "amount": 365800,
+    "method": "Bank Transfer",
+    "status": "Completed",
+    "date": "2026-07-03",
+    "referenceNo": "NEFT123812391",
+    "notes": "Full payment received for INV-2026-005"
+  },
+  {
+    "id": "PAY-1003",
+    "invoiceId": "INV-2026-002",
+    "customerName": "Globex Solutions",
+    "amount": 100300,
+    "method": "NetBanking",
+    "status": "Pending",
+    "date": "2026-07-06",
+    "referenceNo": "TXN48912849",
+    "notes": "Payment initiated by client, awaiting settlement"
+  },
+  {
+    "id": "PAY-1004",
+    "invoiceId": "INV-2026-003",
+    "customerName": "Initech Systems",
+    "amount": 53100,
+    "method": "Credit Card",
+    "status": "Failed",
+    "date": "2026-06-30",
+    "referenceNo": "CC9812498214",
+    "notes": "Transaction failed: Insufficient Credit Limit"
+  }
+]

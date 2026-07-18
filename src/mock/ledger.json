@@ -1,0 +1,52 @@
+[
+  {
+    "id": "LED-GEN",
+    "name": "General Ledger Account",
+    "type": "General Ledger",
+    "balance": 1820000,
+    "debit": 340000,
+    "credit": 2160000,
+    "lastUpdated": "2026-07-15",
+    "description": "Primary company registry of physical assets, capital reserves, and ongoing operations"
+  },
+  {
+    "id": "LED-CUST-ACME",
+    "name": "Customer Account Ledger (Acme Corp)",
+    "type": "Customer Ledger",
+    "balance": 0,
+    "debit": 177000,
+    "credit": 177000,
+    "lastUpdated": "2026-07-05",
+    "description": "Receivables ledger for Acme Corp"
+  },
+  {
+    "id": "LED-SUPP-UMBR",
+    "name": "Supplier Ledger (Umbrella Corp)",
+    "type": "Supplier Ledger",
+    "balance": 45000,
+    "debit": 0,
+    "credit": 45000,
+    "lastUpdated": "2026-07-10",
+    "description": "Payables ledger for inventory supply shipments"
+  },
+  {
+    "id": "LED-CASH",
+    "name": "Petty Cash Ledger",
+    "type": "Cash Ledger",
+    "balance": 25000,
+    "debit": 15000,
+    "credit": 40000,
+    "lastUpdated": "2026-07-12",
+    "description": "Liquid cash reserves for emergency operations"
+  },
+  {
+    "id": "LED-BANK-SBI",
+    "name": "SBI Corporate Bank Account",
+    "type": "Bank Ledger",
+    "balance": 1500000,
+    "debit": 350000,
+    "credit": 1850000,
+    "lastUpdated": "2026-07-14",
+    "description": "Main bank registry for standard digital and wire transfers"
+  }
+]

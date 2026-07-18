@@ -1,0 +1,38 @@
+{
+  "ceoView": {
+    "marketPerformance": "Strong",
+    "criticalInsights": "Company growth continues upwards at 18.5%. Recommended to secure key corporate relationships and scale Cloud Security licensing sales.",
+    "kpis": [
+      { "label": "Enterprise Market Cap", "value": "₹4.5Cr" },
+      { "label": "Net Promoter Score", "value": "78" },
+      { "label": "Retention Rate", "value": "94.2%" }
+    ]
+  },
+  "cfoView": {
+    "cashFlowHealth": "Excellent",
+    "balanceSheetSummary": "Capital Assets: ₹3.2Cr, Reserves: ₹85L, Current Liabilities: ₹14.5L",
+    "kpis": [
+      { "label": "Working Capital", "value": "₹28.5L" },
+      { "label": "Debt Equity Ratio", "value": "0.15" },
+      { "label": "Filing Compliance", "value": "100% On Time" }
+    ]
+  },
+  "salesView": {
+    "velocity": "Accelerated",
+    "pipelineStatus": "₹12,40,000 potential across active deals",
+    "kpis": [
+      { "label": "Average Deal Size", "value": "₹1.4L" },
+      { "label": "Lead-to-Win Rate", "value": "24.5%" },
+      { "label": "Daily Active Quotes", "value": "18" }
+    ]
+  },
+  "inventoryView": {
+    "warehouseEfficiency": "94% Allocated",
+    "deadStockWarning": "₹2.4L in hardware inventory un-moved for over 90 days",
+    "kpis": [
+      { "label": "Inventory Turnover", "value": "6.8x" },
+      { "label": "Average Storage Cost", "value": "₹12k/month" },
+      { "label": "Re-order Compliance", "value": "98.5%" }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "gstCollected": 82800,
+    "gstPaid": 30150,
+    "pendingGst": 52650,
+    "filingStatus": "In Progress"
+  },
+  "filings": [
+    {
+      "period": "June 2026",
+      "gstr1Status": "Filed",
+      "gstr1Date": "2026-07-10",
+      "gstr2Status": "Filed",
+      "gstr2Date": "2026-07-12",
+      "gstr3bStatus": "Filed",
+      "gstr3bDate": "2026-07-15",
+      "taxCollected": 45000,
+      "taxPaid": 12000,
+      "netLiability": 33000
+    },
+    {
+      "period": "July 2026 (Current)",
+      "gstr1Status": "Draft",
+      "gstr1Date": "Pending",
+      "gstr2Status": "Draft",
+      "gstr2Date": "Pending",
+      "gstr3bStatus": "Draft",
+      "gstr3bDate": "Pending",
+      "taxCollected": 82800,
+      "taxPaid": 30150,
+      "netLiability": 52650
+    }
+  ],
+  "hsnSummary": [
+    { "hsnCode": "8471", "description": "Automatic data processing machines (servers)", "value": 310000, "gstRate": 18, "tax": 55800 },
+    { "hsnCode": "8517", "description": "Telecom/Network Routers", "value": 150000, "gstRate": 18, "tax": 27000 }
+  ]
+}

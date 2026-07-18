@@ -1,0 +1,8 @@
+[
+  { "period": "Jul 2026", "revenueActual": 2100000, "revenuePredicted": 2100000, "profitActual": 1000000, "profitPredicted": 1000000, "inventoryLevel": 550000 },
+  { "period": "Aug 2026", "revenueActual": null, "revenuePredicted": 2250000, "profitActual": null, "profitPredicted": 1080000, "inventoryLevel": 580000 },
+  { "period": "Sep 2026", "revenueActual": null, "revenuePredicted": 2400000, "profitActual": null, "profitPredicted": 1150000, "inventoryLevel": 600000 },
+  { "period": "Oct 2026", "revenueActual": null, "revenuePredicted": 2650000, "profitActual": null, "profitPredicted": 1280000, "inventoryLevel": 620000 },
+  { "period": "Nov 2026", "revenueActual": null, "revenuePredicted": 2900000, "profitActual": null, "profitPredicted": 1400000, "inventoryLevel": 640000 },
+  { "period": "Dec 2026", "revenueActual": null, "revenuePredicted": 3200000, "profitActual": null, "profitPredicted": 1550000, "inventoryLevel": 650000 }
+]

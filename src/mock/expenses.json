@@ -1,0 +1,57 @@
+[
+  {
+    "id": "EXP-2026-001",
+    "category": "Salaries",
+    "description": "Monthly salaries for core R&D team",
+    "amount": 250000,
+    "date": "2026-07-01",
+    "status": "Approved",
+    "approvedBy": "CEO",
+    "receipt": "salaries_july_2026.pdf",
+    "gstAmount": 0
+  },
+  {
+    "id": "EXP-2026-002",
+    "category": "Rent",
+    "description": "HQ office space lease payment",
+    "amount": 75000,
+    "date": "2026-07-02",
+    "status": "Approved",
+    "approvedBy": "CFO",
+    "receipt": "lease_receipt_july.pdf",
+    "gstAmount": 13500
+  },
+  {
+    "id": "EXP-2026-003",
+    "category": "Utilities",
+    "description": "High-speed broadband internet and cloud cooling utilities",
+    "amount": 12500,
+    "date": "2026-07-05",
+    "status": "Approved",
+    "approvedBy": "Operations Lead",
+    "receipt": "isp_invoice_8921.pdf",
+    "gstAmount": 2250
+  },
+  {
+    "id": "EXP-2026-004",
+    "category": "Marketing",
+    "description": "Developer advocate community ads campaign",
+    "amount": 45000,
+    "date": "2026-07-10",
+    "status": "Pending Approval",
+    "approvedBy": "",
+    "receipt": "ads_invoice_umbrella.pdf",
+    "gstAmount": 8100
+  },
+  {
+    "id": "EXP-2026-005",
+    "category": "Software License",
+    "description": "Enterprise Gemini API tokens purchase",
+    "amount": 35000,
+    "date": "2026-07-12",
+    "status": "Approved",
+    "approvedBy": "CFO",
+    "receipt": "gemini_api_tokens.pdf",
+    "gstAmount": 6300
+  }
+]

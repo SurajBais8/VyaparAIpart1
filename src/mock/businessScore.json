@@ -1,0 +1,14 @@
+{
+  "overallScore": 84,
+  "factors": [
+    { "name": "Liquidity Index", "score": 92, "status": "Strong", "comment": "Excellent cash and bank balance ratios to cover short term payables." },
+    { "name": "Profitability Ratio", "score": 78, "status": "Stable", "comment": "Robust 47% profit margins, but sales operations overheads are slightly rising." },
+    { "name": "Asset Efficiency", "score": 86, "status": "Excellent", "comment": "High stock turnover and modern depot utilization." },
+    { "name": "Fulfillment Velocity", "score": 80, "status": "Stable", "comment": "Supplier purchase order lead time has improved to 4.2 days." }
+  ],
+  "predictions": {
+    "revenueQ3": 7500000,
+    "growthQonQ": 12.4,
+    "expenseSurgeRisk": "Low"
+  }
+}

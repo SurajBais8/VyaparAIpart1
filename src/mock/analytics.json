@@ -1,0 +1,31 @@
+{
+  "monthlyPerformance": [
+    { "month": "Jan", "revenue": 1200000, "expenses": 800000, "profit": 400000, "newCustomers": 12 },
+    { "month": "Feb", "revenue": 1400000, "expenses": 850000, "profit": 550000, "newCustomers": 15 },
+    { "month": "Mar", "revenue": 1300000, "expenses": 900000, "profit": 400000, "newCustomers": 14 },
+    { "month": "Apr", "revenue": 1600000, "expenses": 950000, "profit": 650000, "newCustomers": 19 },
+    { "month": "May", "revenue": 1800000, "expenses": 1000000, "profit": 800000, "newCustomers": 24 },
+    { "month": "Jun", "revenue": 1750000, "expenses": 980000, "profit": 770000, "newCustomers": 22 },
+    { "month": "Jul (Est)", "revenue": 2100000, "expenses": 1100000, "profit": 1000000, "newCustomers": 30 }
+  ],
+  "regionalRevenue": [
+    { "region": "North India", "value": 750000 },
+    { "region": "West India", "value": 980000 },
+    { "region": "South India", "value": 1120000 },
+    { "region": "East India", "value": 450000 }
+  ],
+  "customerSegment": [
+    { "segment": "Enterprise", "value": 1500000 },
+    { "segment": "Mid-market", "value": 850000 },
+    { "segment": "SMB", "value": 450000 }
+  ],
+  "kpis": {
+    "revenueGrowth": 18.5,
+    "profitMargin": 47.6,
+    "customerGrowth": 36.3,
+    "inventoryValue": 5500000,
+    "salesTrend": "Upward",
+    "purchaseTrend": "Stable",
+    "conversionRate": 3.4
+  }
+}

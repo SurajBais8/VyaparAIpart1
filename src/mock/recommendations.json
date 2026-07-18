@@ -1,0 +1,38 @@
+[
+  {
+    "id": "REC-001",
+    "type": "Low Stock Alert",
+    "title": "Hardware Router Stock Deficit",
+    "description": "Premium Routing Router (SKU: SRV-CLOUD-R) is down to 3 units. Standard replenishment cycle takes 7 days. Demand forecast predicts a 25% surge next month.",
+    "priority": "High",
+    "impact": "Prevent stockout loss of ₹1,50,000",
+    "action": "Draft PO for 15 units immediately"
+  },
+  {
+    "id": "REC-002",
+    "type": "Best Selling Products",
+    "title": "Leverage High-Margin Security Licenses",
+    "description": "Cloud Security Core Licenses has shown a 45% month-on-month sales velocity increase, yielding a 65% net profit margin.",
+    "priority": "Medium",
+    "impact": "Increase revenue by ₹2,80,000",
+    "action": "Allocate 20% more marketing budget to security vertical"
+  },
+  {
+    "id": "REC-003",
+    "type": "Top Customers",
+    "title": "Key Account Loyalty Campaign",
+    "description": "Wayne Enterprises account lifetime value has exceeded ₹20L. High churn risk indicated due to recent contract expiration.",
+    "priority": "High",
+    "impact": "Retain ₹12L annual contract value",
+    "action": "Schedule executive review meeting with client"
+  },
+  {
+    "id": "REC-004",
+    "type": "Expense Optimization",
+    "title": "Redundant ISP Connection Cost",
+    "description": "HQ backup leased line is utilized at less than 2% over the last 90 days. Current contract billing is ₹12,500/month.",
+    "priority": "Low",
+    "impact": "Save ₹1,50,000 annually",
+    "action": "Downgrade plan to standard business fiber broadbands"
+  }
+]

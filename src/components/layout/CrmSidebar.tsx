@@ -60,6 +60,11 @@ export const CrmSidebar: React.FC = () => {
     { title: 'Inventory Analytics', path: '/inventory/analytics', icon: <LineChart className="w-4 h-4" /> },
   ];
 
+  const financialMenu = [
+    { title: 'Accounting Desk', path: '/accounting', icon: <Coins className="w-4 h-4" /> },
+    { title: 'BI & Analytics', path: '/analytics', icon: <LineChart className="w-4 h-4" /> },
+  ];
+
   const renderNavGroup = (items: typeof mainMenu, groupTitle?: string) => {
     return (
       <div className="space-y-1.5 select-none">
@@ -126,6 +131,7 @@ export const CrmSidebar: React.FC = () => {
           {renderNavGroup(mainMenu, 'Executive')}
           {renderNavGroup(crmMenu, 'CRM Operations')}
           {renderNavGroup(inventoryMenu, 'Inventory & Supply')}
+          {renderNavGroup(financialMenu, 'Financials & BI')}
         </div>
       </div>
 

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TXN-2026-001",
+    "type": "Income",
+    "category": "Product Sale",
+    "amount": 177000,
+    "date": "2026-07-05",
+    "sourceAccount": "Customer - Acme Corp",
+    "destAccount": "SBI Corporate Bank Account",
+    "status": "Completed"
+  },
+  {
+    "id": "TXN-2026-002",
+    "type": "Expense",
+    "category": "Rent",
+    "amount": 75000,
+    "date": "2026-07-02",
+    "sourceAccount": "SBI Corporate Bank Account",
+    "destAccount": "Office Landlord Entity",
+    "status": "Completed"
+  },
+  {
+    "id": "TXN-2026-003",
+    "type": "Transfer",
+    "category": "Reserve Shift",
+    "amount": 15000,
+    "date": "2026-07-12",
+    "sourceAccount": "SBI Corporate Bank Account",
+    "destAccount": "Petty Cash Ledger",
+    "status": "Completed"
+  },
+  {
+    "id": "TXN-2026-004",
+    "type": "Journal Entry",
+    "category": "Equity Adjustment",
+    "amount": 50000,
+    "date": "2026-07-14",
+    "sourceAccount": "Director's Equity",
+    "destAccount": "General Ledger Account",
+    "status": "Completed"
+  },
+  {
+    "id": "TXN-2026-005",
+    "type": "Refund",
+    "category": "Customer Refund",
+    "amount": 12000,
+    "date": "2026-07-15",
+    "sourceAccount": "SBI Corporate Bank Account",
+    "destAccount": "Initech Systems",
+    "status": "Completed"
+  }
+]
