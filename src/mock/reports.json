@@ -1,0 +1,57 @@
+{
+  "customerReport": {
+    "totalCustomers": 1240,
+    "activePercentage": 88.5,
+    "growthRate": 6.8,
+    "byRegion": [
+      { "region": "Maharashtra", "count": 450, "revenue": 180500 },
+      { "region": "Karnataka", "count": 380, "revenue": 152000 },
+      { "region": "Tamil Nadu", "count": 210, "revenue": 84000 },
+      { "region": "Delhi/NCR", "count": 200, "revenue": 42400 }
+    ]
+  },
+  "leadReport": {
+    "totalLeads": 185,
+    "sources": [
+      { "source": "Inbound Web", "count": 75, "percentage": 40.5 },
+      { "source": "Outbound Email", "count": 50, "percentage": 27.0 },
+      { "source": "Partner Referral", "count": 30, "percentage": 16.2 },
+      { "source": "Google Search", "count": 20, "percentage": 10.8 },
+      { "source": "Direct Event", "count": 10, "percentage": 5.4 }
+    ],
+    "avgLeadScore": 72.4
+  },
+  "salesReport": {
+    "totalRevenue": 458900,
+    "targetRevenue": 500000,
+    "monthlyBreakdown": [
+      { "month": "January", "revenue": 95000, "expenses": 23000, "deals": 24 },
+      { "month": "February", "revenue": 110000, "expenses": 26000, "deals": 28 },
+      { "month": "March", "revenue": 125000, "expenses": 29000, "deals": 32 },
+      { "month": "April", "revenue": 118000, "expenses": 27000, "deals": 26 },
+      { "month": "May", "revenue": 135000, "expenses": 30000, "deals": 35 },
+      { "month": "June", "revenue": 142300, "expenses": 31000, "deals": 39 }
+    ]
+  },
+  "followupReport": {
+    "totalFollowups": 320,
+    "successfulPercentage": 82.4,
+    "byType": [
+      { "type": "Calls", "count": 140, "success": 115 },
+      { "type": "Meetings", "count": 45, "success": 42 },
+      { "type": "Emails", "count": 90, "success": 68 },
+      { "type": "WhatsApp", "count": 45, "success": 38 }
+    ]
+  },
+  "conversionReport": {
+    "stages": [
+      { "stage": "Lead Generated", "count": 520, "conversion": 100 },
+      { "stage": "Contacted", "count": 380, "conversion": 73 },
+      { "stage": "Qualified", "count": 240, "conversion": 46 },
+      { "stage": "Proposal Sent", "count": 140, "conversion": 26 },
+      { "stage": "Negotiation", "count": 85, "conversion": 16 },
+      { "stage": "Deals Won", "count": 52, "conversion": 10 }
+    ],
+    "averageDaysToClose": 24
+  }
+}

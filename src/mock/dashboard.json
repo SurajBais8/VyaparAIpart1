@@ -1,0 +1,122 @@
+{
+  "statistics": {
+    "todayRevenue": { "value": 15420, "growth": 12.5, "status": "up", "empty": false },
+    "totalRevenue": { "value": 458900, "growth": 8.2, "status": "up", "empty": false },
+    "todayOrders": { "value": 42, "growth": 15.0, "status": "up", "empty": false },
+    "pendingOrders": { "value": 14, "growth": -5.2, "status": "down", "empty": false },
+    "completedOrders": { "value": 328, "growth": 10.4, "status": "up", "empty": false },
+    "customers": { "value": 1240, "growth": 6.8, "status": "up", "empty": false },
+    "newLeads": { "value": 185, "growth": 22.1, "status": "up", "empty": false },
+    "totalProducts": { "value": 85, "growth": 0, "status": "stable", "empty": false },
+    "inventoryAlerts": { "value": 3, "growth": 0, "status": "danger", "empty": false },
+    "pendingPayments": { "value": 12500, "growth": -2.4, "status": "down", "empty": false },
+    "expenses": { "value": 84300, "growth": 4.1, "status": "up", "empty": false },
+    "profit": { "value": 374600, "growth": 9.1, "status": "up", "empty": false },
+    "businessHealthScore": { "value": 94, "growth": 2.0, "status": "up", "empty": false },
+    "growthPercent": { "value": 18.4, "growth": 3.2, "status": "up", "empty": false },
+    "monthlyRevenue": { "value": 142300, "growth": 14.2, "status": "up", "empty": false }
+  },
+  "charts": {
+    "daily": {
+      "revenue": [
+        { "label": "09:00", "revenue": 1200, "sales": 8, "profit": 900, "expenses": 300, "customers": 4, "orders": 8, "leads": 5 },
+        { "label": "11:00", "revenue": 3400, "sales": 15, "profit": 2600, "expenses": 800, "customers": 12, "orders": 15, "leads": 8 },
+        { "label": "13:00", "revenue": 2100, "sales": 10, "profit": 1500, "expenses": 600, "customers": 8, "orders": 10, "leads": 12 },
+        { "label": "15:00", "revenue": 4500, "sales": 22, "profit": 3600, "expenses": 900, "customers": 18, "orders": 22, "leads": 15 },
+        { "label": "17:00", "revenue": 5200, "sales": 25, "profit": 4100, "expenses": 1100, "customers": 22, "orders": 25, "leads": 14 },
+        { "label": "19:00", "revenue": 3100, "sales": 14, "profit": 2300, "expenses": 800, "customers": 15, "orders": 14, "leads": 6 }
+      ]
+    },
+    "weekly": {
+      "revenue": [
+        { "label": "Mon", "revenue": 12000, "sales": 45, "profit": 9200, "expenses": 2800, "customers": 40, "orders": 44, "leads": 25 },
+        { "label": "Tue", "revenue": 15400, "sales": 52, "profit": 11800, "expenses": 3600, "customers": 48, "orders": 50, "leads": 32 },
+        { "label": "Wed", "revenue": 14200, "sales": 48, "profit": 10900, "expenses": 3300, "customers": 44, "orders": 47, "leads": 30 },
+        { "label": "Thu", "revenue": 18900, "sales": 65, "profit": 14500, "expenses": 4400, "customers": 58, "orders": 62, "leads": 45 },
+        { "label": "Fri", "revenue": 22100, "sales": 78, "profit": 17200, "expenses": 4900, "customers": 70, "orders": 75, "leads": 55 },
+        { "label": "Sat", "revenue": 9800, "sales": 32, "profit": 7400, "expenses": 2400, "customers": 28, "orders": 30, "leads": 18 },
+        { "label": "Sun", "revenue": 8500, "sales": 28, "profit": 6500, "expenses": 2000, "customers": 22, "orders": 25, "leads": 12 }
+      ]
+    },
+    "monthly": {
+      "revenue": [
+        { "label": "Jan", "revenue": 95000, "sales": 340, "profit": 72000, "expenses": 23000, "customers": 850, "orders": 320, "leads": 520 },
+        { "label": "Feb", "revenue": 110000, "sales": 390, "profit": 84000, "expenses": 26000, "customers": 920, "orders": 370, "leads": 580 },
+        { "label": "Mar", "revenue": 125000, "sales": 450, "profit": 96000, "expenses": 29000, "customers": 990, "orders": 430, "leads": 640 },
+        { "label": "Apr", "revenue": 118000, "sales": 410, "profit": 91000, "expenses": 27000, "customers": 1050, "orders": 390, "leads": 610 },
+        { "label": "May", "revenue": 135000, "sales": 480, "profit": 105000, "expenses": 30000, "customers": 1120, "orders": 460, "leads": 710 },
+        { "label": "Jun", "revenue": 142300, "sales": 512, "profit": 111300, "expenses": 31000, "customers": 1240, "orders": 495, "leads": 780 }
+      ]
+    },
+    "yearly": {
+      "revenue": [
+        { "label": "2023", "revenue": 1120000, "sales": 4100, "profit": 860000, "expenses": 260000, "customers": 850, "orders": 3950, "leads": 5200 },
+        { "label": "2024", "revenue": 1450000, "sales": 5300, "profit": 1120000, "expenses": 330000, "customers": 1080, "orders": 5120, "leads": 6800 },
+        { "label": "2025", "revenue": 1890000, "sales": 6900, "profit": 1480000, "expenses": 410000, "customers": 1240, "orders": 6700, "leads": 8900 }
+      ]
+    },
+    "productPerformance": [
+      { "name": "SaaS Starter Plan", "value": 45 },
+      { "name": "SaaS Professional Plan", "value": 35 },
+      { "name": "Enterprise Suite Add-on", "value": 15 },
+      { "name": "Integration API License", "value": 5 }
+    ],
+    "leadConversion": [
+      { "stage": "New", "count": 520 },
+      { "stage": "Contacted", "count": 380 },
+      { "stage": "Qualified", "count": 240 },
+      { "stage": "Proposal", "count": 140 },
+      { "stage": "Negotiation", "count": 85 },
+      { "stage": "Won", "count": 52 }
+    ]
+  },
+  "aiRecommendation": {
+    "title": "AI Revenue Catalyst",
+    "score": "A+",
+    "summary": "Your lead-to-won conversion efficiency increased by 3.2% this week. We detected a major trend: leads sourced from E-Commerce and Retail sector close 14 days faster on average. We recommend auto-routing these leads to senior sales representatives.",
+    "actions": [
+      "Prioritize 12 Retail leads currently in Negotiation.",
+      "Launch specialized marketing campaign for SaaS Enterprise Suite.",
+      "Check 3 low-stock products/inventory licenses."
+    ]
+  },
+  "widgets": {
+    "recentOrders": [
+      { "id": "ORD-4821", "customer": "Aman Verma", "amount": 1249, "status": "completed", "date": "10 mins ago" },
+      { "id": "ORD-4820", "customer": "TechVantage Labs", "amount": 4800, "status": "pending", "date": "1 hr ago" },
+      { "id": "ORD-4819", "customer": "Rohan Deshmukh", "amount": 350, "status": "completed", "date": "3 hrs ago" },
+      { "id": "ORD-4818", "customer": "Sneha Iyer", "amount": 899, "status": "completed", "date": "5 hrs ago" }
+    ],
+    "recentCustomers": [
+      { "id": "CST-081", "name": "Nisha Sharma", "company": "Vertex Retail", "status": "active", "avatar": "NS" },
+      { "id": "CST-082", "name": "David Miller", "company": "Nova Healthcare", "status": "active", "avatar": "DM" },
+      { "id": "CST-083", "name": "Vikram Singh", "company": "Apex Consulting", "status": "inactive", "avatar": "VS" }
+    ],
+    "recentLeads": [
+      { "id": "LD-202", "name": "Arjun Patel", "company": "Zenith FinTech", "status": "Proposal", "score": 85, "owner": "John Doe" },
+      { "id": "LD-203", "name": "Sarah Connor", "company": "Cyberdyne Systems", "status": "Qualified", "score": 92, "owner": "Jane Smith" },
+      { "id": "LD-204", "name": "Rajesh Kumar", "company": "Delta Logistics", "status": "Contacted", "score": 55, "owner": "John Doe" }
+    ],
+    "activityTimeline": [
+      { "id": "ACT-01", "type": "call", "title": "Outgoing Call with Amit Roy", "desc": "Discussed SaaS enterprise quotation. Next meeting on Monday.", "time": "Just now", "user": "John Doe" },
+      { "id": "ACT-02", "type": "email", "title": "SaaS Proposal Sent", "desc": "Sent commercial pricing tables to TechVantage Labs.", "time": "2 hrs ago", "user": "Jane Smith" },
+      { "id": "ACT-03", "type": "whatsapp", "title": "WhatsApp Follow-up", "desc": "Confirmed demo scheduling with Rajesh Kumar.", "time": "Yesterday", "user": "John Doe" }
+    ],
+    "upcomingTasks": [
+      { "id": "TSK-101", "task": "Review contract terms with Apex Consulting", "due": "Today, 4:00 PM", "priority": "high", "completed": false },
+      { "id": "TSK-102", "task": "Send onboarding walkthrough to David Miller", "due": "Tomorrow, 10:00 AM", "priority": "medium", "completed": false },
+      { "id": "TSK-103", "task": "Update sales metrics deck", "due": "2026-07-21", "priority": "low", "completed": true }
+    ],
+    "businessTips": [
+      "Companies with active multi-channel lead pipelines close deals up to 28% faster.",
+      "Proactive automated email check-ins reduce pipeline dropoff rates by 42%.",
+      "Regularly archiving lost leads keeps your CRM workspace focused and responsive."
+    ],
+    "aiSuggestions": [
+      "Leads from Delhi/NCR show high purchase intent this month. Run a location focus.",
+      "System has identified 4 inactive customers with total purchase > ₹1,00,000. Send winback email.",
+      "GST verification has been successfully cached for all 12 enterprise clients."
+    ],
+    "weather": { "temp": 28, "condition": "Partly Cloudy", "humidity": 65, "location": "Mumbai, IN" }
+  }
+}

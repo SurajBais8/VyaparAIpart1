@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ACT-101",
+    "type": "call",
+    "title": "Outgoing Call with Amit Roy",
+    "desc": "Discussed details for SaaS enterprise contract renewal. Clarified GST registration details.",
+    "date": "2026-07-18",
+    "time": "10:30 AM",
+    "user": "John Doe",
+    "contact": "Amit Roy",
+    "company": "TechVantage Labs"
+  },
+  {
+    "id": "ACT-102",
+    "type": "whatsapp",
+    "title": "WhatsApp Message to Sneha Iyer",
+    "desc": "Sent link to the updated API analytics specifications.",
+    "date": "2026-07-17",
+    "time": "03:14 PM",
+    "user": "John Doe",
+    "contact": "Sneha Iyer",
+    "company": "Cognitive Solutions"
+  },
+  {
+    "id": "ACT-103",
+    "type": "meeting",
+    "title": "Video Demo with Wayne Enterprises",
+    "desc": "Conducted secure sandbox compliance walkthrough. Bruce Wayne joined for 10 minutes.",
+    "date": "2026-07-12",
+    "time": "11:00 AM",
+    "user": "John Doe",
+    "contact": "Bruce Wayne",
+    "company": "Wayne Enterprises"
+  },
+  {
+    "id": "ACT-104",
+    "type": "email",
+    "title": "Followup Email Sent to Rajesh Kumar",
+    "desc": "Sent pricing structure details for our Standard SaaS plans with custom regional tax models.",
+    "date": "2026-07-15",
+    "time": "09:45 AM",
+    "user": "Jane Smith",
+    "contact": "Rajesh Kumar",
+    "company": "Delta Logistics"
+  },
+  {
+    "id": "ACT-105",
+    "type": "task",
+    "title": "Verify GST registration details",
+    "desc": "Ensure TechVantage Labs GSTIN is correctly mapped in Billing Module.",
+    "date": "2026-07-18",
+    "time": "09:00 AM",
+    "user": "Jane Smith",
+    "contact": "Amit Roy",
+    "company": "TechVantage Labs"
+  }
+]

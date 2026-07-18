@@ -1,0 +1,135 @@
+[
+  {
+    "id": "LD-201",
+    "name": "Arjun Patel",
+    "company": "Zenith FinTech",
+    "mobile": "9822334455",
+    "email": "arjun.p@zenithfin.com",
+    "source": "Inbound Web",
+    "stage": "Proposal",
+    "owner": "John Doe",
+    "score": 85,
+    "status": "Active",
+    "lastContact": "2026-07-16",
+    "nextFollowUp": "2026-07-20",
+    "notes": "Discussing credit underwriting module licensing. Customer requested multi-region pricing grids.",
+    "profile": {
+      "overview": "Arjun is director of IT at Zenith FinTech, based out of Mumbai. They have 450 employees.",
+      "activities": [
+        { "type": "call", "date": "2026-07-16", "title": "Requirements Gathering Call", "desc": "Agreed on core features. They need support for OAuth integration." },
+        { "type": "email", "date": "2026-07-15", "title": "Initial Brochure Sent", "desc": "Emailed our API documentation links." }
+      ],
+      "documents": [
+        { "name": "Zenith_Fintech_API_Requirements.docx", "size": "150 KB", "date": "2026-07-15" }
+      ],
+      "aiSuggestions": [
+        "Focus on security standards as financial sector client.",
+        "Highlight quick deployment speeds to meet their Q3 deadline."
+      ]
+    }
+  },
+  {
+    "id": "LD-202",
+    "name": "Sarah Connor",
+    "company": "Cyberdyne Systems",
+    "mobile": "3105550199",
+    "email": "sconnor@cyberdyne.io",
+    "source": "Outbound Email",
+    "stage": "Negotiation",
+    "owner": "Jane Smith",
+    "score": 92,
+    "status": "Active",
+    "lastContact": "2026-07-17",
+    "nextFollowUp": "2026-07-19",
+    "notes": "Contract draft under legal review. Pricing discussions completed.",
+    "profile": {
+      "overview": "Sarah is CTO of Cyberdyne Systems, an automation and intelligence firm based out of California.",
+      "activities": [
+        { "type": "meeting", "date": "2026-07-14", "title": "Executive Pricing Discussion", "desc": "Agreed on enterprise terms and custom SLAs." }
+      ],
+      "documents": [
+        { "name": "Cyberdyne_Custom_SLA_Draft_v2.pdf", "size": "450 KB", "date": "2026-07-16" }
+      ],
+      "aiSuggestions": [
+        "Customer is sensitive to auto-renewal clauses. Confirm they are comfortable with standard CJS parameters."
+      ]
+    }
+  },
+  {
+    "id": "LD-203",
+    "name": "Rajesh Kumar",
+    "company": "Delta Logistics",
+    "mobile": "9933445566",
+    "email": "rajesh@deltalogistics.com",
+    "source": "Partner Referral",
+    "stage": "Contacted",
+    "owner": "John Doe",
+    "score": 55,
+    "status": "Warm",
+    "lastContact": "2026-07-15",
+    "nextFollowUp": "2026-07-22",
+    "notes": "Sent general product brochure. Looking for inventory dispatch tools.",
+    "profile": {
+      "overview": "Rajesh is the Operations Head at Delta Logistics in Delhi, operating 15 cargo nodes.",
+      "activities": [
+        { "type": "call", "date": "2026-07-15", "title": "Quick Intro Call", "desc": "Gave brief product overview. Rajesh requested a live demo with his operations team." }
+      ],
+      "documents": [],
+      "aiSuggestions": [
+        "Emphasize map and transit tracking integrations.",
+        "Suggest starting with our standard SaaS plan with a 14-day free trial."
+      ]
+    }
+  },
+  {
+    "id": "LD-204",
+    "name": "Ananya Sen",
+    "company": "Pinnacle Edutech",
+    "mobile": "9812233445",
+    "email": "ananya@pinnacle.edu.in",
+    "source": "Google Search",
+    "stage": "New",
+    "owner": "Jane Smith",
+    "score": 40,
+    "status": "New",
+    "lastContact": "2026-07-18",
+    "nextFollowUp": "2026-07-21",
+    "notes": "Submitted demo request form from landing page.",
+    "profile": {
+      "overview": "Ananya is the founder of Pinnacle Edutech, an online university prep platform.",
+      "activities": [],
+      "documents": [],
+      "aiSuggestions": [
+        "Educator sector is pricing sensitive. Emphasize standard plan and startup tier discounts."
+      ]
+    }
+  },
+  {
+    "id": "LD-205",
+    "name": "Bruce Wayne",
+    "company": "Wayne Enterprises",
+    "mobile": "2125550100",
+    "email": "bruce@waynecorp.com",
+    "source": "Direct Event",
+    "stage": "Qualified",
+    "owner": "John Doe",
+    "score": 98,
+    "status": "Active",
+    "lastContact": "2026-07-12",
+    "nextFollowUp": "2026-07-25",
+    "notes": "Highly qualified lead looking for state-of-the-art telemetry and tracking software.",
+    "profile": {
+      "overview": "Wayne Enterprises is a massive multi-national conglomerate with key offices in Gotham.",
+      "activities": [
+        { "type": "meeting", "date": "2026-07-12", "title": "NDA & Security Briefing", "desc": "Completed introductory presentation on data encryption and sandboxing rules." }
+      ],
+      "documents": [
+        { "name": "WayneCorp_Security_Compliance_SOP.pdf", "size": "3.5 MB", "date": "2026-07-12" }
+      ],
+      "aiSuggestions": [
+        "Client values complete offline database sandboxing and strict local session storage.",
+        "Highlight our encryption and local memory caching layers."
+      ]
+    }
+  }
+]

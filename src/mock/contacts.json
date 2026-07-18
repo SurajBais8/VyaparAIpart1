@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CON-001",
+    "name": "Amit Roy",
+    "company": "TechVantage Labs",
+    "companyId": "COM-001",
+    "title": "CTO",
+    "mobile": "9876543210",
+    "email": "amit.roy@techvantage.com",
+    "status": "Active",
+    "dateAdded": "2026-01-15",
+    "notes": "Prefers communicating via email. Usually available for calls on Tuesday/Thursday mornings.",
+    "activities": [
+      { "date": "2026-07-16", "type": "call", "subject": "Discuss SLA Terms", "summary": "Clarified standard CJS build pipeline parameters." }
+    ]
+  },
+  {
+    "id": "CON-002",
+    "name": "Sneha Iyer",
+    "company": "Cognitive Solutions",
+    "companyId": "COM-002",
+    "title": "Product VP",
+    "mobile": "9123456789",
+    "email": "sneha.iyer@cogsol.in",
+    "status": "Active",
+    "dateAdded": "2026-02-10",
+    "notes": "Excellent tech advocate. Keen to adopt new analytics features early.",
+    "activities": [
+      { "date": "2026-07-17", "type": "whatsapp", "subject": "Vite Build Clarification", "summary": "Confirmed that her dev server port is mapped on 3000." }
+    ]
+  },
+  {
+    "id": "CON-003",
+    "name": "Bruce Wayne",
+    "company": "Wayne Enterprises",
+    "companyId": "COM-003",
+    "title": "Chairman & Owner",
+    "mobile": "2125550100",
+    "email": "bruce@waynecorp.com",
+    "status": "Active",
+    "dateAdded": "2026-07-12",
+    "notes": "Rarely answers the phone directly. Communications should flow through Alfred or secure channels.",
+    "activities": [
+      { "date": "2026-07-12", "type": "meeting", "subject": "Special Operations Setup", "summary": "High-security meeting regarding private local database storage." }
+    ]
+  }
+]

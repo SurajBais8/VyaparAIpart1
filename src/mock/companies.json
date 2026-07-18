@@ -1,0 +1,70 @@
+[
+  {
+    "id": "COM-001",
+    "name": "TechVantage Labs",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=80&h=80&fit=crop&q=60",
+    "industry": "Engineering & Design",
+    "employees": "11-50",
+    "revenue": 142500,
+    "contacts": 3,
+    "status": "Active",
+    "profile": {
+      "overview": "TechVantage Labs specializes in civil and structural engineering CAD automation. Based in Mumbai, India.",
+      "contactsList": [
+        { "name": "Amit Roy", "role": "CTO", "email": "amit.roy@techvantage.com" },
+        { "name": "Deepak Mehta", "role": "Operations Manager", "email": "deepak@techvantage.com" }
+      ],
+      "deals": [
+        { "name": "SaaS Starter Upgrade", "value": 25000, "status": "Won" },
+        { "name": "Platinum Support Add-on", "value": 12500, "status": "Qualified" }
+      ],
+      "documents": [
+        { "name": "TechVantage_Master_SLA.pdf", "size": "1.2 MB", "date": "2026-01-16" }
+      ]
+    }
+  },
+  {
+    "id": "COM-002",
+    "name": "Cognitive Solutions",
+    "logo": "https://images.unsplash.com/photo-1557683316-973673baf926?w=80&h=80&fit=crop&q=60",
+    "industry": "Technology & Software",
+    "employees": "51-250",
+    "revenue": 95000,
+    "contacts": 2,
+    "status": "Active",
+    "profile": {
+      "overview": "Cognitive Solutions provides machine learning models as a service. Headquartered in Bangalore, India.",
+      "contactsList": [
+        { "name": "Sneha Iyer", "role": "Product VP", "email": "sneha.iyer@cogsol.in" }
+      ],
+      "deals": [
+        { "name": "API Analytics Licensing", "value": 45000, "status": "Won" }
+      ],
+      "documents": [
+        { "name": "Cognitive_NDA_Signed.pdf", "size": "450 KB", "date": "2026-02-11" }
+      ]
+    }
+  },
+  {
+    "id": "COM-003",
+    "name": "Wayne Enterprises",
+    "logo": "https://images.unsplash.com/photo-1542744094-3a31f103e35f?w=80&h=80&fit=crop&q=60",
+    "industry": "Defense & Technology",
+    "employees": "1000+",
+    "revenue": 2450000,
+    "contacts": 1,
+    "status": "Active",
+    "profile": {
+      "overview": "Wayne Enterprises is a technology, manufacturing, and defense conglomerate with global presence.",
+      "contactsList": [
+        { "name": "Bruce Wayne", "role": "Chairman & Owner", "email": "bruce@waynecorp.com" }
+      ],
+      "deals": [
+        { "name": "Custom Military Telemetry Solution", "value": 850000, "status": "Negotiation" }
+      ],
+      "documents": [
+        { "name": "WayneCorp_Security_Clearance.pdf", "size": "3.5 MB", "date": "2026-07-12" }
+      ]
+    }
+  }
+]

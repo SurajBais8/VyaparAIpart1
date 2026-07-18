@@ -10,6 +10,7 @@ import { Toaster } from 'sonner';
 // Store & Layouts
 import { useAuthStore } from './store/authStore';
 import { AuthLayout } from './components/AuthLayout';
+import { CrmLayout } from './components/layout/CrmLayout';
 
 // Pages
 import { SplashScreen } from './pages/SplashScreen';
@@ -20,7 +21,21 @@ import { OTPVerificationScreen } from './pages/OTPVerificationScreen';
 import { ForgotPasswordScreen } from './pages/ForgotPasswordScreen';
 import { ResetPasswordScreen } from './pages/ResetPasswordScreen';
 import { OnboardingScreen } from './pages/OnboardingScreen';
-import { DashboardPlaceholder } from './pages/DashboardPlaceholder';
+
+// Workspaces
+import { DashboardOverview } from './pages/dashboard/DashboardOverview';
+import { DashboardReports } from './pages/dashboard/DashboardReports';
+import { CustomersWorkspace } from './pages/crm/CustomersWorkspace';
+import { CustomerProfile } from './pages/crm/CustomerProfile';
+import { LeadsWorkspace } from './pages/crm/LeadsWorkspace';
+import { LeadProfile } from './pages/crm/LeadProfile';
+import { CompaniesWorkspace } from './pages/crm/CompaniesWorkspace';
+import { CompanyProfile } from './pages/crm/CompanyProfile';
+import { ContactsWorkspace } from './pages/crm/ContactsWorkspace';
+import { DealsWorkspace } from './pages/crm/DealsWorkspace';
+import { ActivitiesWorkspace } from './pages/crm/ActivitiesWorkspace';
+import { AnalyticsWorkspace } from './pages/crm/AnalyticsWorkspace';
+import { ReportsWorkspace } from './pages/crm/ReportsWorkspace';
 
 // Router Wrapper for AuthLayout pages
 const AuthLayoutWrapper: React.FC = () => {
@@ -59,8 +74,25 @@ export default function App() {
           {/* Onboarding Flow: Step roadmap rail */}
           <Route path="/onboarding" element={<OnboardingScreen />} />
 
-          {/* Dashboard Frame: Placeholder of onboarded values */}
-          <Route path="/dashboard" element={<DashboardPlaceholder />} />
+          {/* Consolidated Platform: Dashboard & CRM */}
+          <Route element={<CrmLayout />}>
+            <Route path="/dashboard" element={<Navigate to="/dashboard/overview" replace />} />
+            <Route path="/dashboard/overview" element={<DashboardOverview />} />
+            <Route path="/dashboard/reports" element={<DashboardReports />} />
+
+            <Route path="/crm" element={<Navigate to="/crm/customers" replace />} />
+            <Route path="/crm/customers" element={<CustomersWorkspace />} />
+            <Route path="/crm/customers/:id" element={<CustomerProfile />} />
+            <Route path="/crm/leads" element={<LeadsWorkspace />} />
+            <Route path="/crm/leads/:id" element={<LeadProfile />} />
+            <Route path="/crm/companies" element={<CompaniesWorkspace />} />
+            <Route path="/crm/companies/:id" element={<CompanyProfile />} />
+            <Route path="/crm/contacts" element={<ContactsWorkspace />} />
+            <Route path="/crm/deals" element={<DealsWorkspace />} />
+            <Route path="/crm/activities" element={<ActivitiesWorkspace />} />
+            <Route path="/crm/analytics" element={<AnalyticsWorkspace />} />
+            <Route path="/crm/reports" element={<ReportsWorkspace />} />
+          </Route>
 
           {/* Catch-all Redirect to Entry Splash */}
           <Route path="*" element={<Navigate to="/" replace />} />

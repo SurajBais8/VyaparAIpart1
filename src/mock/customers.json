@@ -1,0 +1,160 @@
+[
+  {
+    "id": "CST-001",
+    "name": "Amit Roy",
+    "avatar": "AR",
+    "company": "TechVantage Labs",
+    "mobile": "9876543210",
+    "email": "amit.roy@techvantage.com",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "gstNumber": "27AAAAA1111A1Z1",
+    "totalOrders": 12,
+    "totalPurchase": 142500,
+    "outstandingAmount": 12500,
+    "status": "Active",
+    "createdDate": "2026-01-15",
+    "lastActivity": "2026-07-18T10:15:00-07:00",
+    "businessType": "Enterprise",
+    "tags": ["Premium", "SaaS", "Fast-Closing"],
+    "profile": {
+      "overview": "Amit is the CTO of TechVantage Labs, an engineering design agency with 150+ staff. They use our SaaS platform for system designs.",
+      "aiSummary": "Highly active premium client. Has shown interest in upgrading to the Platinum support SLA. Outstanding bills are usually resolved within 10 days of invoice dispatch.",
+      "orders": [
+        { "id": "ORD-4512", "date": "2026-07-01", "amount": 25000, "status": "completed" },
+        { "id": "ORD-4211", "date": "2026-05-14", "amount": 42000, "status": "completed" },
+        { "id": "ORD-3910", "date": "2026-03-20", "amount": 12500, "status": "completed" }
+      ],
+      "invoices": [
+        { "id": "INV-2026-098", "dueDate": "2026-08-01", "amount": 12500, "status": "unpaid" },
+        { "id": "INV-2026-082", "dueDate": "2026-07-01", "amount": 25000, "status": "paid" }
+      ],
+      "payments": [
+        { "id": "PAY-0922", "date": "2026-07-02", "amount": 25000, "method": "Bank Transfer" },
+        { "id": "PAY-0641", "date": "2026-05-15", "amount": 42000, "method": "UPI" }
+      ],
+      "documents": [
+        { "name": "TechVantage_SaaS_Service_Contract.pdf", "size": "1.2 MB", "date": "2026-01-16" },
+        { "name": "GST_Registration_Certificate.pdf", "size": "850 KB", "date": "2026-01-15" }
+      ],
+      "notes": [
+        { "author": "John Doe", "content": "Requested custom integration support for Slack webhooks next month.", "date": "2026-07-14" },
+        { "author": "Jane Smith", "content": "Expressed high satisfaction with dashboard speeds.", "date": "2026-04-20" }
+      ]
+    }
+  },
+  {
+    "id": "CST-002",
+    "name": "Sneha Iyer",
+    "avatar": "SI",
+    "company": "Cognitive Solutions",
+    "mobile": "9123456789",
+    "email": "sneha.iyer@cogsol.in",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "gstNumber": "29BBBBB2222B2Z2",
+    "totalOrders": 8,
+    "totalPurchase": 95000,
+    "outstandingAmount": 0,
+    "status": "Active",
+    "createdDate": "2026-02-10",
+    "lastActivity": "2026-07-17T15:30:00-07:00",
+    "businessType": "Mid-Market",
+    "tags": ["Consulting", "Tech"],
+    "profile": {
+      "overview": "Sneha is the Product VP at Cognitive Solutions, focusing on deep learning applications. They are using our API analytics layer.",
+      "aiSummary": "On time payor with moderate support interactions. Has recommended our product to two external partners.",
+      "orders": [
+        { "id": "ORD-4491", "date": "2026-06-25", "amount": 15000, "status": "completed" },
+        { "id": "ORD-4100", "date": "2026-04-02", "amount": 25000, "status": "completed" }
+      ],
+      "invoices": [
+        { "id": "INV-2026-071", "dueDate": "2026-07-15", "amount": 15000, "status": "paid" }
+      ],
+      "payments": [
+        { "id": "PAY-0811", "date": "2026-06-26", "amount": 15000, "method": "Credit Card" }
+      ],
+      "documents": [
+        { "name": "Mutual_NDA_Signed.pdf", "size": "450 KB", "date": "2026-02-11" }
+      ],
+      "notes": [
+        { "author": "John Doe", "content": "Likes our system's automatic threshold alert features.", "date": "2026-06-28" }
+      ]
+    }
+  },
+  {
+    "id": "CST-003",
+    "name": "Rohan Deshmukh",
+    "avatar": "RD",
+    "company": "Pinnacle Media Group",
+    "mobile": "9812345678",
+    "email": "rohan.d@pinnaclemedia.in",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "gstNumber": "27CCCCC3333C3Z3",
+    "totalOrders": 4,
+    "totalPurchase": 38000,
+    "outstandingAmount": 4500,
+    "status": "Inactive",
+    "createdDate": "2026-03-01",
+    "lastActivity": "2026-07-10T11:20:00-07:00",
+    "businessType": "SMB",
+    "tags": ["Media", "Churn-Risk"],
+    "profile": {
+      "overview": "Rohan is the founder of Pinnacle Media Group, a boutique content studio based in Pune.",
+      "aiSummary": "High risk of churning. Did not renew standard support subscription last month due to budget realignment. Follow up required.",
+      "orders": [
+        { "id": "ORD-4022", "date": "2026-03-05", "amount": 19000, "status": "completed" }
+      ],
+      "invoices": [
+        { "id": "INV-2026-044", "dueDate": "2026-04-10", "amount": 4500, "status": "unpaid" }
+      ],
+      "payments": [
+        { "id": "PAY-0521", "date": "2026-03-06", "amount": 19000, "method": "UPI" }
+      ],
+      "documents": [],
+      "notes": [
+        { "author": "Jane Smith", "content": "Stated that pricing was slightly high for their regional client roster size.", "date": "2026-05-12" }
+      ]
+    }
+  },
+  {
+    "id": "CST-004",
+    "name": "Divya Nair",
+    "avatar": "DN",
+    "company": "HealSpace Systems",
+    "mobile": "9898989898",
+    "email": "divya@healspace.com",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "gstNumber": "33DDDDD4444D4Z4",
+    "totalOrders": 15,
+    "totalPurchase": 240000,
+    "outstandingAmount": 0,
+    "status": "Active",
+    "createdDate": "2025-11-20",
+    "lastActivity": "2026-07-18T08:30:00-07:00",
+    "businessType": "Enterprise",
+    "tags": ["Healthcare", "Legacy", "Partner"],
+    "profile": {
+      "overview": "Divya manages medical informatics at HealSpace, providing hospital analytics SaaS. They are integrating our reporting widgets.",
+      "aiSummary": "Highly satisfied enterprise customer. Active user since late 2025. Excellent reference account.",
+      "orders": [
+        { "id": "ORD-3810", "date": "2026-06-01", "amount": 40000, "status": "completed" },
+        { "id": "ORD-3520", "date": "2026-04-15", "amount": 40000, "status": "completed" }
+      ],
+      "invoices": [
+        { "id": "INV-2026-060", "dueDate": "2026-06-15", "amount": 40000, "status": "paid" }
+      ],
+      "payments": [
+        { "id": "PAY-0710", "date": "2026-06-12", "amount": 40000, "method": "NetBanking" }
+      ],
+      "documents": [
+        { "name": "HealSpace_HIPAA_Annexure.pdf", "size": "2.1 MB", "date": "2025-11-21" }
+      ],
+      "notes": [
+        { "author": "Jane Smith", "content": "Divya agreed to do a co-branded case study with us in Q4.", "date": "2026-06-20" }
+      ]
+    }
+  }
+]

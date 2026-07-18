@@ -1,0 +1,84 @@
+[
+  {
+    "id": "DL-501",
+    "name": "TechVantage SLA Expansion",
+    "company": "TechVantage Labs",
+    "value": 25000,
+    "stage": "Proposal",
+    "probability": 70,
+    "expectedClosing": "2026-08-15",
+    "owner": "John Doe",
+    "status": "active",
+    "products": ["SaaS Professional Support SLA", "Slack Integration Addon"],
+    "notes": "Negotiating response times in SLA clause. Pricing proposal is submitted.",
+    "timeline": [
+      { "date": "2026-07-16", "event": "SLA pricing sent", "author": "John Doe" },
+      { "date": "2026-07-10", "event": "Deal identified", "author": "Jane Smith" }
+    ]
+  },
+  {
+    "id": "DL-502",
+    "name": "Wayne Enterprises Telemetry License",
+    "company": "Wayne Enterprises",
+    "value": 850000,
+    "stage": "Negotiation",
+    "probability": 90,
+    "expectedClosing": "2026-07-28",
+    "owner": "John Doe",
+    "status": "active",
+    "products": ["Custom Offline Core Sandbox Suite", "Premium Multi-node Encryption"],
+    "notes": "Wayne legal department completed reviewing our licensing guidelines. Final approval expected on next board meeting.",
+    "timeline": [
+      { "date": "2026-07-15", "event": "Compliance paperwork approved", "author": "John Doe" },
+      { "date": "2026-07-12", "event": "NDA executed", "author": "John Doe" }
+    ]
+  },
+  {
+    "id": "DL-503",
+    "name": "Cognitive Solutions API License",
+    "company": "Cognitive Solutions",
+    "value": 45000,
+    "stage": "Won",
+    "probability": 100,
+    "expectedClosing": "2026-06-30",
+    "owner": "Jane Smith",
+    "status": "won",
+    "products": ["SaaS Professional Plan (Annual)", "API Analytics Addon"],
+    "notes": "Annual payment received in full on 2026-06-30.",
+    "timeline": [
+      { "date": "2026-06-30", "event": "Payment cleared & onboarding initialized", "author": "Jane Smith" }
+    ]
+  },
+  {
+    "id": "DL-504",
+    "name": "Pinnacle Media Group Cloud Migrator",
+    "company": "Pinnacle Media Group",
+    "value": 15000,
+    "stage": "Lost",
+    "probability": 0,
+    "expectedClosing": "2026-06-15",
+    "owner": "Jane Smith",
+    "status": "lost",
+    "products": ["Data Cloud Migrator Tooling"],
+    "notes": "Project cancelled internally by customer due to budget realignment constraints.",
+    "timeline": [
+      { "date": "2026-06-12", "event": "Customer reported project freeze", "author": "Jane Smith" }
+    ]
+  },
+  {
+    "id": "DL-505",
+    "name": "HealSpace Analytics Integration",
+    "company": "HealSpace Systems",
+    "value": 60000,
+    "stage": "Prospect",
+    "probability": 25,
+    "expectedClosing": "2026-09-01",
+    "owner": "Jane Smith",
+    "status": "active",
+    "products": ["SaaS Professional Plan (Annual)", "Advanced Healthcare Dashboard Panel"],
+    "notes": "Initial interest gathered from webinars. Scheduling first call with operations head.",
+    "timeline": [
+      { "date": "2026-07-18", "event": "Initial inbound prospect generated", "author": "System" }
+    ]
+  }
+]
