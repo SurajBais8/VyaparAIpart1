@@ -1,0 +1,6 @@
+{
+  "name": "Enterprise Authentication and Onboarding Flow",
+  "description": "Enterprise-level SaaS Authentication & Onboarding experience, complete with custom multi-step onboarding, splash welcome flows, OTP verification, and adaptive theme controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
