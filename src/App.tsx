@@ -56,6 +56,17 @@ import { InventoryAnalytics } from './pages/inventory/InventoryAnalytics';
 import AccountingWorkspace from './features/accounting/pages/AccountingWorkspace';
 import AnalyticsWorkspaceBI from './features/analytics/pages/AnalyticsWorkspace';
 
+// HRMS Module 6 Workspaces
+import HRWorkspace from './features/hr/pages/HRWorkspace';
+import EmployeeWorkspace from './features/hr/pages/EmployeeWorkspace';
+import AttendanceWorkspace from './features/hr/pages/AttendanceWorkspace';
+import LeaveWorkspace from './features/hr/pages/LeaveWorkspace';
+import PayrollWorkspace from './features/hr/pages/PayrollWorkspace';
+import RecruitmentWorkspace from './features/hr/pages/RecruitmentWorkspace';
+import PerformanceWorkspace from './features/hr/pages/PerformanceWorkspace';
+import DepartmentWorkspace from './features/hr/pages/DepartmentWorkspace';
+import HRReports from './features/hr/pages/HRReports';
+
 // Router Wrapper for AuthLayout pages
 const AuthLayoutWrapper: React.FC = () => {
   return (
@@ -130,6 +141,17 @@ export default function App() {
             {/* Financials & Business Intelligence */}
             <Route path="/accounting" element={<AccountingWorkspace />} />
             <Route path="/analytics" element={<AnalyticsWorkspaceBI />} />
+
+            {/* HRMS Module 6 Routes */}
+            <Route path="/hr" element={<HRWorkspace />} />
+            <Route path="/hr/employees" element={<EmployeeWorkspace />} />
+            <Route path="/hr/attendance" element={<AttendanceWorkspace />} />
+            <Route path="/hr/leave" element={<LeaveWorkspace />} />
+            <Route path="/hr/payroll" element={<PayrollWorkspace />} />
+            <Route path="/hr/recruitment" element={<RecruitmentWorkspace />} />
+            <Route path="/hr/performance" element={<PerformanceWorkspace />} />
+            <Route path="/hr/departments" element={<DepartmentWorkspace />} />
+            <Route path="/hr/reports" element={<HRReports />} />
           </Route>
 
           {/* Catch-all Redirect to Entry Splash */}

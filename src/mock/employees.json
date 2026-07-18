@@ -1,0 +1,218 @@
+[
+  {
+    "id": "EMP-001",
+    "name": "Arjun Sharma",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    "department": "Engineering",
+    "designation": "Principal Software Architect",
+    "email": "arjun.sharma@enterprise.com",
+    "phone": "+91 98765 43210",
+    "joiningDate": "2021-04-12",
+    "employmentType": "Full-time",
+    "status": "Active",
+    "personalInfo": {
+      "dob": "1988-07-24",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "pan": "BKPDS5501A",
+      "aadhaar": "4892-3012-9901",
+      "address": "B-402, Elite Tower, Sector 62, Noida, UP, 201301"
+    },
+    "jobDetails": {
+      "manager": "Siddharth Sen",
+      "workLocation": "Noida HQ",
+      "probationPeriod": "Completed",
+      "noticePeriod": "90 Days"
+    },
+    "documents": [
+      { "name": "Offer_Letter_Arjun_Sharma.pdf", "uploadedAt": "2021-04-01", "size": "1.4 MB", "url": "#" },
+      { "name": "Aadhaar_Card_Verified.pdf", "uploadedAt": "2021-04-02", "size": "650 KB", "url": "#" },
+      { "name": "PAN_Card_Verified.pdf", "uploadedAt": "2021-04-02", "size": "450 KB", "url": "#" }
+    ],
+    "notes": [
+      { "id": "N-101", "author": "Pooja Hegde (HR)", "date": "2024-01-15", "text": "Arjun successfully mentored 3 junior associates in the high-scale service migration this quarter." },
+      { "id": "N-102", "author": "Siddharth Sen (Director)", "date": "2024-06-10", "text": "Exceptional system design on the core billing gateway relaunch." }
+    ],
+    "performanceRating": 4.9,
+    "salary": 185000,
+    "aiSummary": "Top-tier technical contributor with exemplary architectural leadership. Arjun's systems operate at 99.99% uptime. Recommended for the upcoming Director of Platform Engineering track."
+  },
+  {
+    "id": "EMP-002",
+    "name": "Priya Nair",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+    "department": "Marketing",
+    "designation": "Growth Marketing Lead",
+    "email": "priya.nair@enterprise.com",
+    "phone": "+91 91234 56789",
+    "joiningDate": "2022-01-10",
+    "employmentType": "Full-time",
+    "status": "Active",
+    "personalInfo": {
+      "dob": "1992-11-14",
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "pan": "CQPDR8829B",
+      "aadhaar": "9021-4829-1120",
+      "address": "Penthouse C, Maple Woods, HSR Layout, Bengaluru, Karnataka, 560102"
+    },
+    "jobDetails": {
+      "manager": "Aakash Mehta",
+      "workLocation": "Bengaluru Office",
+      "probationPeriod": "Completed",
+      "noticePeriod": "60 Days"
+    },
+    "documents": [
+      { "name": "Appointment_Letter_Priya.pdf", "uploadedAt": "2022-01-05", "size": "1.2 MB", "url": "#" },
+      { "name": "KYC_Documents.pdf", "uploadedAt": "2022-01-08", "size": "950 KB", "url": "#" }
+    ],
+    "notes": [
+      { "id": "N-201", "author": "Aakash Mehta (VP)", "date": "2024-03-22", "text": "Exceeded the Q1 customer acquisition target by 35% through localized programmatic ads." }
+    ],
+    "performanceRating": 4.7,
+    "salary": 145000,
+    "aiSummary": "Highly analytical and metric-driven marketer. Priya has significantly lowered CAC while scaling up trial conversions. Candidate for Senior Marketing Director."
+  },
+  {
+    "id": "EMP-003",
+    "name": "Rohan Das",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    "department": "Sales",
+    "designation": "Enterprise Account Executive",
+    "email": "rohan.das@enterprise.com",
+    "phone": "+91 99887 76655",
+    "joiningDate": "2022-08-16",
+    "employmentType": "Full-time",
+    "status": "Active",
+    "personalInfo": {
+      "dob": "1991-04-05",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "pan": "DNPDA9912Z",
+      "aadhaar": "7712-4456-2910",
+      "address": "452, Lane 12, Park Street, Kolkata, West Bengal, 700016"
+    },
+    "jobDetails": {
+      "manager": "Meera Joshi",
+      "workLocation": "Remote (Kolkata)",
+      "probationPeriod": "Completed",
+      "noticePeriod": "30 Days"
+    },
+    "documents": [
+      { "name": "Employment_Contract.pdf", "uploadedAt": "2022-08-10", "size": "1.8 MB", "url": "#" }
+    ],
+    "notes": [
+      { "id": "N-301", "author": "Meera Joshi (Director)", "date": "2024-04-05", "text": "Closed 3 enterprise accounts worth over ₹1.2 Cr ARR in a single month." }
+    ],
+    "performanceRating": 4.5,
+    "salary": 120000,
+    "aiSummary": "Top-tier salesperson with exceptional negotiation skills. Extremely resilient pipeline, though forecast accuracy can be refined. Over-indexing on quotas consistently."
+  },
+  {
+    "id": "EMP-004",
+    "name": "Ananya Roy",
+    "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "department": "Finance",
+    "designation": "Senior Financial Analyst",
+    "email": "ananya.roy@enterprise.com",
+    "phone": "+91 97766 55443",
+    "joiningDate": "2023-02-01",
+    "employmentType": "Full-time",
+    "status": "On Leave",
+    "personalInfo": {
+      "dob": "1994-09-18",
+      "gender": "Female",
+      "maritalStatus": "Married",
+      "pan": "ERPDS4829K",
+      "aadhaar": "2291-8890-4421",
+      "address": "Apt 9C, Regency Manor, Bandra West, Mumbai, Maharashtra, 400050"
+    },
+    "jobDetails": {
+      "manager": "Ramesh Kumar",
+      "workLocation": "Mumbai Office",
+      "probationPeriod": "Completed",
+      "noticePeriod": "60 Days"
+    },
+    "documents": [
+      { "name": "Offer_Letter_Ananya.pdf", "uploadedAt": "2023-01-15", "size": "1.5 MB", "url": "#" },
+      { "name": "MBA_Degree_Verified.pdf", "uploadedAt": "2023-01-20", "size": "2.2 MB", "url": "#" }
+    ],
+    "notes": [
+      { "id": "N-401", "author": "Ramesh Kumar (CFO)", "date": "2024-05-30", "text": "Ananya put together the entire statutory tax projection binder flawlessly." }
+    ],
+    "performanceRating": 4.6,
+    "salary": 110000,
+    "aiSummary": "Highly meticulous, expert in SaaS business metrics and compliance regulations. Possesses deep understanding of cross-border currency hedges."
+  },
+  {
+    "id": "EMP-005",
+    "name": "Kabir Mehta",
+    "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80",
+    "department": "Human Resources",
+    "designation": "Senior HR Generalist",
+    "email": "kabir.mehta@enterprise.com",
+    "phone": "+91 95544 33221",
+    "joiningDate": "2023-07-15",
+    "employmentType": "Full-time",
+    "status": "Active",
+    "personalInfo": {
+      "dob": "1993-01-30",
+      "gender": "Male",
+      "maritalStatus": "Single",
+      "pan": "FZPDK2290M",
+      "aadhaar": "3391-4458-1122",
+      "address": "Flat 101, Oakwood Apartments, Gachibowli, Hyderabad, Telangana, 500032"
+    },
+    "jobDetails": {
+      "manager": "Sonal Chawla",
+      "workLocation": "Hyderabad Office",
+      "probationPeriod": "Completed",
+      "noticePeriod": "30 Days"
+    },
+    "documents": [
+      { "name": "Employment_Offer.pdf", "uploadedAt": "2023-07-01", "size": "1.1 MB", "url": "#" }
+    ],
+    "notes": [
+      { "id": "N-501", "author": "Sonal Chawla (HR VP)", "date": "2024-02-18", "text": "Drove the entire cultural onboarding drive for 45 campus hires seamlessly." }
+    ],
+    "performanceRating": 4.4,
+    "salary": 95000,
+    "aiSummary": "Empathetic and highly communicative. Exceptional at resolving internal conflicts and organizing multi-city employee satisfaction pulse drives."
+  },
+  {
+    "id": "EMP-006",
+    "name": "Aditi Joshi",
+    "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+    "department": "Engineering",
+    "designation": "Frontend Developer",
+    "email": "aditi.joshi@enterprise.com",
+    "phone": "+91 93322 11009",
+    "joiningDate": "2024-03-01",
+    "employmentType": "Full-time",
+    "status": "Active",
+    "personalInfo": {
+      "dob": "1997-05-12",
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "pan": "GNPDC1122Q",
+      "aadhaar": "8823-1122-4455",
+      "address": "Room 404, Orchid PG, Sector 15, Gurgaon, Haryana, 122001"
+    },
+    "jobDetails": {
+      "manager": "Arjun Sharma",
+      "workLocation": "Gurgaon Office",
+      "probationPeriod": "Under Probation",
+      "noticePeriod": "45 Days"
+    },
+    "documents": [
+      { "name": "Appointment_Joshi.pdf", "uploadedAt": "2024-02-25", "size": "1.3 MB", "url": "#" },
+      { "name": "Degree_Certificates.pdf", "uploadedAt": "2024-02-26", "size": "3.1 MB", "url": "#" }
+    ],
+    "notes": [
+      { "id": "N-601", "author": "Arjun Sharma (Principal)", "date": "2024-05-01", "text": "Quickly integrated into the codebase and shipped 4 high-fidelity dashboards inside her first 60 days." }
+    ],
+    "performanceRating": 4.2,
+    "salary": 80000,
+    "aiSummary": "A promising frontend talent. Quick learner, high-quality code. Needs to build confidence in architectural system design discussions, but execution velocity is highly competitive."
+  }
+]

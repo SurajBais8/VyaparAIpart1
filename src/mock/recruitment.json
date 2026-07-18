@@ -1,0 +1,123 @@
+{
+  "jobs": [
+    {
+      "id": "JOB-001",
+      "title": "Senior Frontend Developer",
+      "department": "Engineering",
+      "status": "Open",
+      "experience": "5-8 Years",
+      "location": "Noida HQ",
+      "candidatesCount": 14,
+      "postedDate": "2026-07-01"
+    },
+    {
+      "id": "JOB-002",
+      "title": "Lead DevOps Engineer",
+      "department": "Engineering",
+      "status": "Open",
+      "experience": "8-12 Years",
+      "location": "Bengaluru Office",
+      "candidatesCount": 9,
+      "postedDate": "2026-07-05"
+    },
+    {
+      "id": "JOB-003",
+      "title": "SEO & Content Manager",
+      "department": "Marketing",
+      "status": "Closed",
+      "experience": "3-5 Years",
+      "location": "Remote",
+      "candidatesCount": 22,
+      "postedDate": "2026-06-15"
+    },
+    {
+      "id": "JOB-004",
+      "title": "SaaS Account Executive",
+      "department": "Sales",
+      "status": "Open",
+      "experience": "4-6 Years",
+      "location": "Mumbai",
+      "candidatesCount": 18,
+      "postedDate": "2026-07-10"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CAN-001",
+      "name": "Vikram Adityan",
+      "email": "vikram.adityan@gmail.com",
+      "phone": "+91 90011 22334",
+      "jobId": "JOB-001",
+      "jobTitle": "Senior Frontend Developer",
+      "experience": "6 Years",
+      "stage": "Technical Round",
+      "appliedDate": "2026-07-03",
+      "resume": "Vikram_Resume_FE_Architect.pdf",
+      "notes": [
+        { "id": "CN-1", "author": "Arjun Sharma", "date": "2026-07-08", "text": "Exceptional deep dive on micro-frontend layout mechanisms and server-side state hydration." }
+      ],
+      "documents": [
+        { "name": "Vikram_Resume_FE_Architect.pdf", "uploadedAt": "2026-07-03", "size": "450 KB" }
+      ],
+      "aiEvaluation": "Demonstrated excellent command over Vite and React 18+ concurrent rendering. Candidate exhibits very high cultural compatibility with Noida Engineering squads."
+    },
+    {
+      "id": "CAN-002",
+      "name": "Meghna Kapoor",
+      "email": "meghna.kapoor@outlook.com",
+      "phone": "+91 98888 77777",
+      "jobId": "JOB-001",
+      "jobTitle": "Senior Frontend Developer",
+      "experience": "5.5 Years",
+      "stage": "HR Screening",
+      "appliedDate": "2026-07-04",
+      "resume": "Meghna_Kapoor_FE.pdf",
+      "notes": [
+        { "id": "CN-2", "author": "Kabir Mehta", "date": "2026-07-06", "text": "Communication skills are phenomenal. Very enthusiastic about developer relations and user advocacy." }
+      ],
+      "documents": [
+        { "name": "Meghna_Kapoor_FE.pdf", "uploadedAt": "2026-07-04", "size": "320 KB" }
+      ],
+      "aiEvaluation": "Exceptional professional pedigree. Proven ability to translate product mockups into pixel-perfect components. High aptitude for growth tracks."
+    },
+    {
+      "id": "CAN-003",
+      "name": "Sandeep Saxena",
+      "email": "sandeep.saxena@yahoo.com",
+      "phone": "+91 94455 66778",
+      "jobId": "JOB-002",
+      "jobTitle": "Lead DevOps Engineer",
+      "experience": "10 Years",
+      "stage": "Management Interview",
+      "appliedDate": "2026-07-06",
+      "resume": "Sandeep_DevOps_Principal.pdf",
+      "notes": [
+        { "id": "CN-3", "author": "Siddharth Sen", "date": "2026-07-12", "text": "Sandeep has managed multi-million dollar AWS/GCP cloud configurations. Clear, strategic mindset." }
+      ],
+      "documents": [
+        { "name": "Sandeep_DevOps_Principal.pdf", "uploadedAt": "2026-07-06", "size": "610 KB" },
+        { "name": "AWS_Certified_Architect.pdf", "uploadedAt": "2026-07-06", "size": "410 KB" }
+      ],
+      "aiEvaluation": "Top-tier cloud specialist. Possesses extensive knowledge of Terraform, Kubernetes clusters, and security-hardening compliance loops. Strong hire recommendation."
+    },
+    {
+      "id": "CAN-004",
+      "name": "Neha Singhal",
+      "email": "neha.singhal@gmail.com",
+      "phone": "+91 92211 44556",
+      "jobId": "JOB-004",
+      "jobTitle": "SaaS Account Executive",
+      "experience": "4 Years",
+      "stage": "Offered",
+      "appliedDate": "2026-07-11",
+      "resume": "Neha_Singhal_Sales_SaaS.pdf",
+      "notes": [
+        { "id": "CN-4", "author": "Meera Joshi", "date": "2026-07-15", "text": "Superb presentation during the sales pitch scenario simulation. Very steady negotiator." }
+      ],
+      "documents": [
+        { "name": "Neha_Singhal_Sales_SaaS.pdf", "uploadedAt": "2026-07-11", "size": "280 KB" }
+      ],
+      "aiEvaluation": "Highly dynamic character with a proven book of business in APAC. Expected ramp-up time: under 3 weeks. Recommended to lock offer immediately."
+    }
+  ]
+}

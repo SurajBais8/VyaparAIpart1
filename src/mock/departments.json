@@ -1,0 +1,42 @@
+[
+  {
+    "id": "DEP-001",
+    "name": "Engineering",
+    "manager": "Siddharth Sen",
+    "employeeCount": 18,
+    "budget": 12000000,
+    "performance": 94
+  },
+  {
+    "id": "DEP-002",
+    "name": "Marketing",
+    "manager": "Aakash Mehta",
+    "employeeCount": 8,
+    "budget": 6500000,
+    "performance": 89
+  },
+  {
+    "id": "DEP-003",
+    "name": "Sales",
+    "manager": "Meera Joshi",
+    "employeeCount": 12,
+    "budget": 5000000,
+    "performance": 91
+  },
+  {
+    "id": "DEP-004",
+    "name": "Finance",
+    "manager": "Ramesh Kumar",
+    "employeeCount": 5,
+    "budget": 3500000,
+    "performance": 95
+  },
+  {
+    "id": "DEP-005",
+    "name": "Human Resources",
+    "manager": "Sonal Chawla",
+    "employeeCount": 6,
+    "budget": 3000000,
+    "performance": 88
+  }
+]

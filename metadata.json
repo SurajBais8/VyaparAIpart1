@@ -1,6 +1,6 @@
 {
   "name": "Enterprise Authentication and Onboarding Flow",
-  "description": "Enterprise-level SaaS Authentication & Onboarding experience, complete with custom multi-step onboarding, splash welcome flows, OTP verification, and adaptive theme controls.",
+  "description": "Enterprise-level SaaS experience with integrated Authentication, multi-step Onboarding, CRM, Inventory Management, Accounting & BI, and a complete Cognitive HRMS suite.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

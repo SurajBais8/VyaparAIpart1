@@ -1,0 +1,62 @@
+[
+  {
+    "id": "LR-001",
+    "employeeId": "EMP-004",
+    "employeeName": "Ananya Roy",
+    "department": "Finance",
+    "leaveType": "Earned Leave",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-20",
+    "days": 6,
+    "reason": "Family relocation arrangements",
+    "status": "Approved"
+  },
+  {
+    "id": "LR-002",
+    "employeeId": "EMP-006",
+    "employeeName": "Aditi Joshi",
+    "department": "Engineering",
+    "leaveType": "Casual Leave",
+    "startDate": "2026-07-22",
+    "endDate": "2026-07-23",
+    "days": 2,
+    "reason": "Personal work at hometown",
+    "status": "Pending"
+  },
+  {
+    "id": "LR-003",
+    "employeeId": "EMP-002",
+    "employeeName": "Priya Nair",
+    "department": "Marketing",
+    "leaveType": "Sick Leave",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-06",
+    "days": 2,
+    "reason": "Viral fever recovery",
+    "status": "Approved"
+  },
+  {
+    "id": "LR-004",
+    "employeeId": "EMP-003",
+    "employeeName": "Rohan Das",
+    "department": "Sales",
+    "leaveType": "Casual Leave",
+    "startDate": "2026-07-29",
+    "endDate": "2026-07-30",
+    "days": 2,
+    "reason": "Extended weekend leisure",
+    "status": "Rejected"
+  },
+  {
+    "id": "LR-005",
+    "employeeId": "EMP-001",
+    "employeeName": "Arjun Sharma",
+    "department": "Engineering",
+    "leaveType": "Earned Leave",
+    "startDate": "2026-08-10",
+    "endDate": "2026-08-14",
+    "days": 5,
+    "reason": "Annual family vacation trip",
+    "status": "Pending"
+  }
+]

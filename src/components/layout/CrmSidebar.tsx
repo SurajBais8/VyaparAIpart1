@@ -65,6 +65,18 @@ export const CrmSidebar: React.FC = () => {
     { title: 'BI & Analytics', path: '/analytics', icon: <LineChart className="w-4 h-4" /> },
   ];
 
+  const hrMenu = [
+    { title: 'HR Dashboard', path: '/hr', icon: <Activity className="w-4 h-4" /> },
+    { title: 'Employee Directory', path: '/hr/employees', icon: <Users2 className="w-4 h-4" /> },
+    { title: 'Attendance Logbook', path: '/hr/attendance', icon: <Activity className="w-4 h-4" /> },
+    { title: 'Leave & Time-Off', path: '/hr/leave', icon: <Files className="w-4 h-4" /> },
+    { title: 'Payroll Ledger', path: '/hr/payroll', icon: <Coins className="w-4 h-4" /> },
+    { title: 'Talent Acquisition', path: '/hr/recruitment', icon: <Contact2 className="w-4 h-4" /> },
+    { title: 'Performance OKRs', path: '/hr/performance', icon: <Sparkles className="w-4 h-4" /> },
+    { title: 'Departments & Org', path: '/hr/departments', icon: <Building2 className="w-4 h-4" /> },
+    { title: 'HR Reports', path: '/hr/reports', icon: <Files className="w-4 h-4" /> },
+  ];
+
   const renderNavGroup = (items: typeof mainMenu, groupTitle?: string) => {
     return (
       <div className="space-y-1.5 select-none">
@@ -132,6 +144,7 @@ export const CrmSidebar: React.FC = () => {
           {renderNavGroup(crmMenu, 'CRM Operations')}
           {renderNavGroup(inventoryMenu, 'Inventory & Supply')}
           {renderNavGroup(financialMenu, 'Financials & BI')}
+          {renderNavGroup(hrMenu, 'HRMS Module 6')}
         </div>
       </div>
 

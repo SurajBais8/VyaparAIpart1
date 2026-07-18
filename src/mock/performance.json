@@ -1,0 +1,116 @@
+{
+  "reviews": [
+    {
+      "id": "REV-001",
+      "employeeId": "EMP-001",
+      "employeeName": "Arjun Sharma",
+      "department": "Engineering",
+      "reviewer": "Siddharth Sen",
+      "reviewPeriod": "H1 2026",
+      "rating": 4.9,
+      "selfRating": 4.8,
+      "strengths": "Outstanding distributed systems architecture, stellar technical guidance, patient mentorship of intermediate engineers.",
+      "improvements": "Could focus further on early executive delegation to prevent personal burnout on rapid-growth services.",
+      "status": "Completed"
+    },
+    {
+      "id": "REV-002",
+      "employeeId": "EMP-002",
+      "employeeName": "Priya Nair",
+      "department": "Marketing",
+      "reviewer": "Aakash Mehta",
+      "reviewPeriod": "H1 2026",
+      "rating": 4.7,
+      "selfRating": 4.5,
+      "strengths": "Superb data-driven campaign optimization, dynamic conversion funnel growth, clear and persuasive communication style.",
+      "improvements": "Should try establishing quarterly content pipelines slightly earlier to cushion production bottlenecks.",
+      "status": "Completed"
+    },
+    {
+      "id": "REV-003",
+      "employeeId": "EMP-003",
+      "employeeName": "Rohan Das",
+      "department": "Sales",
+      "reviewer": "Meera Joshi",
+      "reviewPeriod": "H1 2026",
+      "rating": 4.5,
+      "selfRating": 4.7,
+      "strengths": "Excellent deal closure speed, powerful enterprise partner relationships, tenacious follow-up patterns.",
+      "improvements": "Needs to maintain high accuracy on sales lifecycle logs in the CRM ledger.",
+      "status": "Completed"
+    },
+    {
+      "id": "REV-004",
+      "employeeId": "EMP-006",
+      "employeeName": "Aditi Joshi",
+      "department": "Engineering",
+      "reviewer": "Arjun Sharma",
+      "reviewPeriod": "H1 2026",
+      "rating": 4.2,
+      "selfRating": 4.0,
+      "strengths": "Speedy frontend assembly, pixel-perfect design accuracy, proactive learning of backend system states.",
+      "improvements": "Needs further independent review loops before pushing mission-critical components.",
+      "status": "Completed"
+    }
+  ],
+  "goals": [
+    {
+      "id": "GOL-001",
+      "employeeId": "EMP-001",
+      "employeeName": "Arjun Sharma",
+      "title": "Migrate core subscription engine to multi-region active cluster",
+      "targetDate": "2026-09-30",
+      "progress": 85,
+      "status": "On Track"
+    },
+    {
+      "id": "GOL-002",
+      "employeeId": "EMP-002",
+      "employeeName": "Priya Nair",
+      "title": "Reduce lead acquisition cost by 20% on Google and Meta Ads",
+      "targetDate": "2026-10-15",
+      "progress": 60,
+      "status": "On Track"
+    },
+    {
+      "id": "GOL-003",
+      "employeeId": "EMP-003",
+      "title": "Close at least ₹2.5 Cr in new enterprise pipeline contracts",
+      "targetDate": "2026-12-31",
+      "progress": 45,
+      "status": "On Track"
+    },
+    {
+      "id": "GOL-004",
+      "employeeId": "EMP-006",
+      "title": "Author 10 highly reusable dynamic grid and filter dashboard modules",
+      "targetDate": "2026-08-31",
+      "progress": 90,
+      "status": "Ahead"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "PRM-001",
+      "employeeId": "EMP-001",
+      "employeeName": "Arjun Sharma",
+      "department": "Engineering",
+      "currentDesignation": "Principal Software Architect",
+      "proposedDesignation": "Director of Platform Engineering",
+      "justification": "Arjun's exceptional system management and leadership in engineering over the last 3 years have positioned him perfectly to steer the wider platform group.",
+      "status": "Pending Review",
+      "effectiveDate": "2026-10-01"
+    },
+    {
+      "id": "PRM-002",
+      "employeeId": "EMP-002",
+      "employeeName": "Priya Nair",
+      "department": "Marketing",
+      "currentDesignation": "Growth Marketing Lead",
+      "proposedDesignation": "Senior Marketing Director",
+      "justification": "Priya's strategic performance lowered CAC by 40% while doubling incoming leads, demonstrating strong leadership readiness.",
+      "status": "Approved",
+      "effectiveDate": "2026-08-01"
+    }
+  ]
+}
